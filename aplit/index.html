@@ -3,15 +3,69 @@
 <head>
     <title>How to Java: a comprehensive guide to FRC programming</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+	<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
 </head>
 <body>
     <div id="titlepage">
-        <div id="howto">
-            How to
-        </div>
-        <div id="java">
-            Java:
-        </div>
+		<div class="htj">
+			<div class="howto">
+				How to
+			</div>
+			<div class="java">
+				Java:
+			</div>
+		</div><!--
+		--><div class="logo">
+			
+		</div>
+		<div class="sub">
+			a comprehensive guide to FRC programming
+		</div>
+		<div class="description">
+			Designed to walk you through the process of programming your robot from start to finish.
+		</div>
+		<div class="arrow">
+			<a href="#page1"><img src="temp_arrow.png"></a>
+		</div>
     </div>
+	
+	<div id="page1">
+		<p>Lorem ipsum dolor sit amet, ad albucius corrumpit adipiscing ius. Quaestio antiopam salutandi per ei, quo ad diam civibus, vide civibus interesset ut cum. Per melius mediocrem ut, ut quo impetus platonem repudiandae, et vel latine nostrud. Ea dolore reformidans vim, quo labore alienum accusam et. Te sonet assueverit deterruisset cum, justo euismod perfecto ea eam. Has errem indoctum similique cu.</p>
+
+		<p>Cu mel quas minimum, ius id malis vocibus vivendum, etiam alienum id mea. In mei incorrupte voluptatibus, fuisset nostrum ocurreret usu ne. Habeo aliquando mediocritatem vel ad. Eam augue omittam recteque in. Duo id altera theophrastus.</p>
+
+		<p>Autem consectetuer usu no, at vix accusam inciderint. Nec ex enim nulla moderatius, ius et debet omittam intellegam, vis ei periculis ocurreret. Qui id nonumy possit sanctus, sed essent dictas dissentiunt ei, sea ex error maiestatis constituto. Animal sanctus aliquando est et, ex est appetere euripidis temporibus.</p>
+
+		<p>Et nam erant luptatum. Sea ei noster feugait comprehensam, mea vivendo verterem iudicabit an. Aperiri reprehendunt has no, facilisi tractatos definitionem eu eam. Causae nominavi inimicus cum an, eum ei splendide abhorreant deseruisse.</p>
+
+		<p>Clita gloriatur sit cu, timeam aliquip feugiat ei eum. No eam debet fuisset fabellas, vis ea convenire interpretaris concludaturque. Usu mucius labores ei, omnis aeque deleniti quo ne. Accusata adipiscing ad eam, case postea ex vel.</p>
+	
+	</div>
+	
 </body>
 </html>
