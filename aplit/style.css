@@ -77,11 +77,27 @@ html, body {
 	/*background-color: white;*/
 }
 
+.section {
+	position: relative;
+}
+.section p{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
 #page1 {
 	width: 100%;
 	height: 100%;
 	margin: 0;
 	background: url('setting_up.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#page4 {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	background: url('git.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 }
