@@ -84,6 +84,9 @@ html, body {
 	position: absolute;
 	bottom: 0;
 	right: 0;
+	padding-right: 30px;
+	font-size: 50pt;
+	font-family: Arial;
 }
 #page1 {
 	width: 100%;
@@ -98,6 +101,14 @@ html, body {
 	height: 100%;
 	margin: 0;
 	background: url('git.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#page5 {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	background: url('control.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 }
