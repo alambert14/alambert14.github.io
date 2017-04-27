@@ -6,67 +6,60 @@ html, body {
 	font-size: 12pt;
 	padding: 0px;
 	overflow-x: hidden;
+	width: 100%;
+	font-family: 'Khula', sans-serif;
 }
 
 #titlepage {
     width: 100%;
     height: 100%;
     /*background: url('grey_wash_wall.png');*/
-	background-color: #5764aa;
+	background-color: #c9c9c9;
 	/*background-color: #6f6f7b;*/
 }
 
+.titlelinks {
+	height: 3%;
+	width: 96%;
+	padding: 1% 2% 1% 2%;
+	text-align: right;
+	margin: 0px;
+}
+.titlelinks a {
+	color: #424144;
+	text-decoration: none;
+	padding: 0px 1% 0px 1%;
+	font-family: 'Khula', sans-serif;
+}
+.titlelinks a:hover {
+	color: black;
+}
 .htj {
 	/*color: rgba(0,0,0,.5);*/
 	width: 100%;
-	height: 40%;
+	height: 50%;
 	margin: 0px;
 	display: block;
 	text-align: center;
 	border: 1px dasssshed black;
 	
-	color: #333A61;
+	color: #858585;
 	font-family: 'Patrick Hand', cursive;
 	font-size: 1000%;
 	position: relative;
-	line-height: 100%;
+	line-height: 360%;
 	vertical-align: middle;
+	text-shadow: 1px 1px 0 rgba(140,140,140,0.6) , -1px -1px 1px rgba(0,0,0,0.67);
+	background: url('circles1.png') no-repeat;
 	/*background: url('grey_wash_wall_dark.png') center center;
 	-webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;
 	text-shadow: -5px -5px black;
 	/*text-shadow: 0px 1px 0px rgba(255,255,255,1), 0px -1px 0px rgba(0,0,0,1);*/
 }
-.htj a:hover {
-	text-shadow: 1px 1px 0 rgba(140,140,140,0.6) , -1px -1px 1px rgba(0,0,0,0.67);
-}
 
-.howto {
-	color: #D13F50;
-    font-size: 750%;
-	font-family: 'Patrick Hand', cursive;
-    /*font-weight: bold;*/
-    height: 30%;
-    display: block;
-	vertical-align: bottom;
-    /*background-color: red;*/
-	border: 1px dashed black;
-	
-}
-.java {
-	color: color: #424144;;
-    font-size: 1400%;
-    /*font-weight: bold;*/
-	font-family: 'Patrick Hand', cursive;
-    height: 70%;
-    display: block;
-	vertical-align: top;
-    /*background-color: blue;*/
-	border: 1px dashed black;
-	text-shadow: 1px 1px 0 rgba(140,140,140,0.6) , -1px -1px 1px rgba(0,0,0,0.67);
-}
 .sub {
-	color: #424144;
+	color: #858585;
 	width: 100%;
 	height: 10%;
 	font-size: 370%;
@@ -78,18 +71,18 @@ html, body {
 	text-shadow: 1px 1px 0 rgba(140,140,140,0.6) , -1px -1px 1px rgba(0,0,0,0.67);
 	border: 1px dashed black;
 }
-.pop {
-	color: #992E3B;
-}
+
 .description {
 	width: 100%;
 	height: 10%;
-	font-size: 200%;
+	font-size: 180%;
 	display: block;
 	/*background-color: yellow;*/
 	margin: 0px;
 	padding: 1.5% 0 0 1.5%;
 	border: 1px dashed black;
+	font-family: 'Khula', sans-serif;
+	text-align: center;
 }
 .arrow {
 	width: 100%;
@@ -125,7 +118,6 @@ html, body {
 	right: 0;
 	padding-right: 30px;
 	font-size: 50pt;
-	font-family: Arial;
 }
 #page1 {
 	width: 100%;
@@ -167,11 +159,15 @@ html, body {
 	line-height: 300%;
 }
 .title-nav {
-	font-family: Arial;
 	font-size: 150%;
 	list-style-type: none;
 }
 .title-nav li a {
 	text-decoration: none;
 	color: black;
+}
+
+.footer {
+	height: 25%;
+	background-color: #c9c9c9;
 }
