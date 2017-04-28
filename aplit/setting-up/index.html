@@ -6,6 +6,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet">
 	<script type="text/javascript" src="script.js"></script>
+	
 </head>
 <body>
 	<div class="top">
@@ -21,6 +22,16 @@
 				<ul class="sub-menu">
 					<li>Installing the FRC Update Suite</li>
 					<li>Installing Eclipse and Plugins</li>
+				</ul>
+			</li>
+			<li><a href="#">FRC Control System</a>
+				<ul class="sub-menu">
+					<li>roboRIO</li>
+					<li>Power Distribution Panel</li>
+					<li>Speed Controllers</li>
+					<li>PCM</li>
+					<li>VRM</li>
+					<li>Wireless Radio</li>
 				</ul>
 			</li>
 			<li><a href="#">Java Programming</a>
@@ -46,8 +57,23 @@
 					<li>Merging</li>
 				</ul>
 			</li>
-			<li><a href="#">FRC Control System</a>
-				<ul class="sub-menu">
+		</ul>
+	</div>
+	</div>
+	
+	<div class="main">
+		<div class="nav">
+			<h2>Next: <a href="#">Installing the FRC Update Suite</a></h2>
+		<ul class="dropdown">
+			<li><a href="#">Home</a><button class="accordion"></button></li>
+			<li><a href="#">Setting Up</a><button class="accordion"></button>
+				<ul class="panel">
+					<li>Installing the FRC Update Suite</li>
+					<li>Installing Eclipse and Plugins</li>
+				</ul>
+			</li>
+			<li><a href="#">FRC Control System</a><button class="accordion"></button>
+				<ul class="panel">
 					<li>roboRIO</li>
 					<li>Power Distribution Panel</li>
 					<li>Speed Controllers</li>
@@ -56,22 +82,30 @@
 					<li>Wireless Radio</li>
 				</ul>
 			</li>
+			<li><a href="#">Java Programming</a><button class="accordion"></button>
+				<ul class="panel">
+					<li>Using Eclipse</li>
+					<li>WPILib API</li>
+					<li>Subsystems</li>
+					<li>Commands</li>
+					<li>RobotMap</li>
+					<li>OI</li>
+					<li>Robot.java</li>
+				</ul>
+			</li>
+			<li><a href="#">Git</a><button class="accordion"></button>
+				<ul class="panel">
+					<li>Repositories</li>
+					<li>GitHub</li>
+					<li>Setting Up a Git Repository</li>
+					<li>Branching</li>
+					<li>Staging</li>
+					<li>Committing</li>
+					<li>Pushing and Pulling</li>
+					<li>Merging</li>
+				</ul>
+			</li>
 		</ul>
-	</div>
-	</div>
-	
-	<div class="main">
-		<div class="nav">
-			<h2>Next: <a href="#">Installing the FRC Update Suite</a></h2>
-			<ul class="sidebar">
-				<li><a href="#">Setting Up</a>
-					<ul class="sidesub">
-						<li>Installing the FRC Update Suite</li>
-						<li>Installing Java</li>
-						<li>Installing Eclipse and Plugins</li>
-					</ul>
-				</li>
-			</ul>
 		</div>
 		<div class="content">
 			<h1>Setting Up Your Environment</h1>
@@ -79,6 +113,22 @@
 		</div>
 	</div>
 
+<script>
+	var acc = document.getElementsByClassName("accordion");
+	var i;
 
+	for (i = 0; i < acc.length; i++) {
+		acc[i].onclick = function(){
+			this.classList.toggle("active");
+			var panel = this.nextElementSibling;
+			if (panel.style.display === "block") {
+				panel.style.display = "none";
+			} else {
+				panel.style.display = "block";
+			}
+		}
+	}
+	</script>
+	
 </body>
 </html>

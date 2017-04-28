@@ -2,6 +2,7 @@ html,body {
 	height: 100%;
 	width: 100%;
 	margin: 0px 0px 0px 0px;
+	font-family: 'Khula', sans-serif;
 }	
 
 .top {
@@ -29,9 +30,6 @@ html,body {
 	width: 100%;
 	background-color: #c9c9c9;
 	/*border: 1px dashed black;*/
-	-webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,1);
-	-moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,1);
-	box-shadow: 0px 3px 5px 0px rgba(0,0,0,1);
 	z-index: 1;
 }
 .sticky-nav ul {
@@ -49,8 +47,7 @@ html,body {
 	height: 100%;
 }
 .sticky-nav ul li a {
-	color: #858585;
-	font-family: Arial;
+	color: #424144;
 	font-size: 150%;
 	text-decoration: none;
 	line-height: 151%;
@@ -58,6 +55,7 @@ html,body {
 }
 .sticky-nav ul li a:hover {
 	color: black;
+	background-color: white;
 }
 .sticky-nav li ul {
 	display: none;
@@ -68,7 +66,9 @@ html,body {
 }
 .sticky-nav li:hover ul li {
 	display: block;
-	width: auto;
+	width: 250px;
+	line-height: 100%;
+	background-color: white;
 }
 
 .main {
@@ -89,26 +89,38 @@ html,body {
 	border: 1px dashed black;
 	padding: 1.5% 1.5% 1.5% 1.5%;
 }
-.sidebar {
-	color: red;
+
+.dropdown {
 	list-style-type: none;
 	margin: 0px;
 }
-.sidebar li a {
-	font-weight: bold;
-	text-decoration: none;
-	margin: 0px;
-	text-indent: 0px;
-}
-.sidesub{
-	font-weight: normal;
-	text-decoration: none;
+.dropdown li a {
 	color: black;
-	list-style-type: none;
+	text-decoration: none;
+	
 }
-.sidesub li {
-	text-indent: 0px;
+
+.accordion {
+    cursor: pointer;
+    width: 20%;
+    text-align: left;
+	background-color: white;
+	border: none;
 }
+.accordion:after {
+    content: '\25BC';
+}
+.accordion.active:after {
+    content: "\25B2"; /* Unicode character for "minus" sign (-) */
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+}
+
 
 .content {
 	width: 74%;

@@ -41,7 +41,7 @@ html, body {
 	margin: 0px;
 	display: block;
 	text-align: center;
-	border: 1px dasssshed black;
+	/*border: 1px dashed black;*/
 	
 	color: #858585;
 	font-family: 'Patrick Hand', cursive;
@@ -69,18 +69,19 @@ html, body {
 	/*background-color: lime;*/
 	margin: 0px;
 	text-shadow: 1px 1px 0 rgba(140,140,140,0.6) , -1px -1px 1px rgba(0,0,0,0.67);
-	border: 1px dashed black;
+	/*border: 1px dashed black;*/
 }
 
 .description {
 	width: 100%;
 	height: 10%;
 	font-size: 180%;
+	color: #424144;
 	display: block;
 	/*background-color: yellow;*/
 	margin: 0px;
 	padding: 1.5% 0 0 1.5%;
-	border: 1px dashed black;
+	/*border: 1px dashed black;*/
 	font-family: 'Khula', sans-serif;
 	text-align: center;
 }
@@ -91,14 +92,14 @@ html, body {
 	text-align: center;
 	display: block;
 	/*background-color: white;*/
-	border: 1px dashed black;
-	color: #424144;
+	/*border: 1px dashed black;*/
+	color: #858585;
 	font-family: 'Patrick Hand', cursive;
 	text-shadow: 1px 1px 0 rgba(140,140,140,0.6) , -1px -1px 1px rgba(0,0,0,0.67);
 }
 .arrow a {
 	text-decoration: none;
-	color: #424144;
+	color: #858585;
 }
 
 .section {
