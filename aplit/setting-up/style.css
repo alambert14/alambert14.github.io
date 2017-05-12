@@ -148,6 +148,13 @@ html,body {
 	font-family: 'Khula', sans-serif;
 	padding: 1.5% 1.5% 1.5% 1.5%;
 }
+.content a {
+	color: #424144;
+	text-decoration: none;
+}
+.content a:hover {
+	color: black;
+}
 .content h1 {
 	border-bottom: 1px solid black;
 	display: inline-block;
@@ -156,7 +163,8 @@ html,body {
 	font-size: 300%;
 	background-color: white;
 	margin-top: 0px;
-	line-height: 300%;
+	margin-bottom: 1%;
+	line-height: 250%;
 	vertical-align: bottom;
 	
 }
