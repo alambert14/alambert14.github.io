@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!-- SETTING UP YOUR ENVIRONMENT -->
+<!-- INSTALLING JAVA -->
 <html>
 <head>
-	<title>Setting Up Your Environment</title>
+	<title>Installing Java</title>
 	<link rel="stylesheet" type="text/css" href="../style.css">
 	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet">
@@ -21,7 +21,7 @@
 	<div class="sticky-nav">
 		<ul class="clearfix">
 			<li><a href="../">Home</a></li>
-			<li><a href="#">Setting Up</a></li>
+			<li><a href="../setting-up">Setting Up</a></li>
 			<li><a href="../control-system">FRC Control System</a></li>
 			<li><a href="../java-programming">Java Programming</a></li>
 			<li><a href="#">Git</a></li>
@@ -31,13 +31,13 @@
 	
 	<div class="main">
 		<div class="nav">
-			<h2>Next: <a href="update-suite.html">Installing the FRC Update Suite</a></h2>
+			<h2>Next: <a href="installing-eclipse.html">Installing Eclipse and Plugins</a></h2>
 		<ul class="dropdown">
 			<li><a href="../">Home</a></li>
-			<li><a href="#">Setting Up</a><button class="accordion"></button>
+			<li><a href="../setting-up">Setting Up</a><button class="accordion"></button>
 				<ul class="panel">
 					<li><a href="update-suite.html">Installing the FRC Update Suite</a></li>
-					<li><a href="installing-java.html">Installing Java</a></li>
+					<li><a href="#">Installing Java</a></li>
 					<li><a href="installing-eclipse.html">Installing Eclipse and Plugins</a></li>
 				</ul>
 			</li>
@@ -78,8 +78,10 @@
 		</div>
 		<div class="confoot">
 			<div class="content">
-				<h1>Setting Up Your Environment</h1>
-				<p>Before any great programmer can begin programming, it is necessary for everything to be set up correctly. In the world of FIRST Robotics, this has to be done a very specific way. Luckily for us, there is extensive documentation on this entire process, so it does not need to be fully described here. If you have not yet used the <a href="https://wpilib.screenstepslive.com/s/4485" target="_blank">WPI Screen Steps Live</a>, I would suggest giving it a quick read because I will be referencing it frequently in this section so that you can have detailed instructions for each step of this important process.</p>
+				<h1>Installing Java</h1>
+				<p>In order to program in Java, it is super important that the Java JDK (Java Developer's Kit) is installed on your computer. One advantage of Java is that it is not platform specific, meaning you can use it with any type of computer; however, that means that you must download the specific version for your operating system. In a nutshell, it just needs to be downloaded from <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">Oracle</a> and then linked in Eclipse, which will be described in the next section.</p>
+				<p>However, Java also needs to be installed to the roboRIO (the computer on the robot). This is so that the Java code can be compiled on the robot itself. <a href="https://wpilib.screenstepslive.com/s/4485/m/13809/l/288822-installing-java-8-on-the-roborio-using-the-frc-roborio-java-installer-java-only" target="_blank">WPI Screen Steps</a> has steps for this as well, just follow them exactly. </p>
+				<img src="../Pictures/java.png" width="30%" height="30%">
 			</div>
 			<div class="footer">
 				<a href="../questions.html">Questions?</a>
