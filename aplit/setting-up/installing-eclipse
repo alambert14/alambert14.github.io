@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!-- INSTALLING Eclipse -->
+<html>
+<head>
+  <title>Installing Eclipse and Plugins</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	
+</head>
+<body>
+	<div class="top">
+	<div class="header">
+		How to Java:
+		<img src="../circles2.png">
+	</div>
+	
+	<div class="sticky-nav">
+		<ul class="clearfix">
+			<li><a href="../">Home</a></li>
+			<li><a href="../setting-up">Setting Up</a></li>
+			<li><a href="../control-system">FRC Control System</a></li>
+			<li><a href="../java-programming">Java Programming</a></li>
+			<li><a href="#">Git</a></li>
+		</ul>
+	</div>
+	</div>
+	
+	<div class="main">
+		<div class="nav">
+			<h2>Next: <a href="../control-system">FRC Control System</a></h2>
+		<ul class="dropdown">
+			<li><a href="../">Home</a></li>
+			<li><a href="../setting-up">Setting Up</a><button class="accordion"></button>
+				<ul class="panel">
+					<li><a href="update-suite.html">Installing the FRC Update Suite</a></li>
+					<li><a href="installing-java.html">Installing Java</a></li>
+					<li><a href="#">Installing Eclipse and Plugins</a></li>
+				</ul>
+			</li>
+			<li><a href="../control-system">FRC Control System</a><button class="accordion"></button>
+				<ul class="panel">
+					<li><a href="../control-system/roborio.html">roboRIO</a></li>
+					<li><a href="../control-system/pdp.html">Power Distribution Panel</a></li>
+					<li><a href="../control-system/speed-controllers.html">Speed Controllers</a></li>
+					<li><a href="../control-system/pneumatics.html">Pneumatics</a></li>
+					<li><a href="../control-system/VRM.html">VRM</a></li>
+					<li><a href="../control-system/radio.html">Wireless Radio</a></li>
+				</ul>
+			</li>
+			<li><a href="../java-programming">Java Programming</a><button class="accordion"></button>
+				<ul class="panel">
+					<li><a href="../java-programming/eclipse.html">Using Eclipse</a></li>
+					<li><a href="../java-programming/api.html">WPILib API</a></li>
+					<li><a href="../java-programming/api.html">Subsystems</a></li>
+					<li><a href="../java-programming/api.html">Commands</a></li>
+					<li><a href="../java-programming/api.html">RobotMap</a></li>
+					<li><a href="../java-programming/api.html">OI</a></li>
+					<li><a href="../java-programming/api.html">Robot.java</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Git</a><button class="accordion"></button>
+				<ul class="panel">
+					<li><a href="#">Repositories</a></li>
+					<li><a href="#">GitHub</a></li>
+					<li><a href="#">Setting Up a Git Repository</a></li>
+					<li><a href="#">Branching</a></li>
+					<li><a href="#">Staging</a></li>
+					<li><a href="#">Committing</a></li>
+					<li><a href="#">Pushing and Pulling</a></li>
+					<li><a href="#">Merging</a></li>
+				</ul>
+			</li>
+		</ul>
+		</div>
+		<div class="confoot">
+			<div class="content">
+				<h1>Installing Eclipse and Plugins</h1>
+        <p>Eclipse is the IDE (integrated development environment) required by FIRST for Java programming. "But why can't I use BlueJ, or some other IDE?" you might ask. First of all, Eclipse is an incredibly common Java IDE, and you will probably see it again in college and the professional world. It is always good to expand your horizons. Secondly, FIRST creates plugins specifically for Eclipse so that programming the robot can be much easier.</p>
+        <p>These plugins include a variety of utilities (described further in "Using Eclipse"):</p>
+        <ul>
+          <li>Templates for different robot designs</li>
+          <li>Use of the WPILib libraries</li>
+        </ul>
+        <p>The installation of Eclipse is also very well documented (I repeat, WITH PICTURES) in the <a href="https://wpilib.screenstepslive.com/s/4485/m/13809/l/599671-installing-the-frc-2017-update-suite-all-languages" target="_blank">WPI ScreenSteps</a>. Follow them to a tee and you will be all set.</p>
+			</div><!--footer-->
+		</div><!--confoot-->
+	
+	</div>
+	
+
+<script>
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+		acc[i].onclick = function(){
+			this.classList.toggle("active");
+			var panel = this.nextElementSibling;
+			if (panel.style.display === "block") {
+				panel.style.display = "none";
+			} else {
+				panel.style.display = "block";
+			}
+		}
+	}
+	</script>
+	
+</body>
+</html>
