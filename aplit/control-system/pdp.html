@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!-- INSTALLING Eclipse -->
+<!-- PDP -->
 <html>
 <head>
-  <title>Installing Eclipse and Plugins</title>
+	<title>Power Distribution Panel</title>
 	<link rel="stylesheet" type="text/css" href="../style.css">
 	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet">
@@ -31,35 +31,35 @@
 	
 	<div class="main">
 		<div class="nav">
-			<h2>Next: <a href="../control-system">FRC Control System</a></h2>
+			<h2>Next: <a href="speed-controllers.html">Speed Controllers</a></h2>
 		<ul class="dropdown">
 			<li><a href="../">Home</a></li>
 			<li><a href="../setting-up">Setting Up</a><button class="accordion"></button>
 				<ul class="panel">
-					<li><a href="update-suite.html">Installing the FRC Update Suite</a></li>
-					<li><a href="installing-java.html">Installing Java</a></li>
-					<li><a href="#">Installing Eclipse and Plugins</a></li>
+					<li><a href="../setting-up/update-suite.html">Installing the FRC Update Suite</a></li>
+					<li><a href="../setting-up/">Installing Java</a></li>
+					<li><a href="../setting-up/installing-eclipse.html">Installing Eclipse and Plugins</a></li>
 				</ul>
 			</li>
 			<li><a href="../control-system">FRC Control System</a><button class="accordion"></button>
 				<ul class="panel">
-					<li><a href="../control-system/roborio.html">roboRIO</a></li>
-					<li><a href="../control-system/pdp.html">Power Distribution Panel</a></li>
-					<li><a href="../control-system/speed-controllers.html">Speed Controllers</a></li>
-					<li><a href="../control-system/pneumatics.html">Pneumatics</a></li>
-					<li><a href="../control-system/VRM.html">VRM</a></li>
-					<li><a href="../control-system/radio.html">Wireless Radio</a></li>
+					<li><a href="roborio.html">roboRIO</a></li>
+					<li><a href="#">Power Distribution Panel</a></li>
+					<li><a href="speed-controllers.html">Speed Controllers</a></li>
+					<li><a href="pneumatics.html">Pneumatics</a></li>
+					<li><a href="vrm.html">VRM</a></li>
+					<li><a href="radio.html">Wireless Radio</a></li>
 				</ul>
 			</li>
 			<li><a href="../java-programming">Java Programming</a><button class="accordion"></button>
 				<ul class="panel">
 					<li><a href="../java-programming/eclipse.html">Using Eclipse</a></li>
 					<li><a href="../java-programming/api.html">WPILib API</a></li>
-					<li><a href="../java-programming/api.html">Subsystems</a></li>
-					<li><a href="../java-programming/api.html">Commands</a></li>
-					<li><a href="../java-programming/api.html">RobotMap</a></li>
-					<li><a href="../java-programming/api.html">OI</a></li>
-					<li><a href="../java-programming/api.html">Robot.java</a></li>
+					<li><a href="../java-programming/subsystems.html">Subsystems</a></li>
+					<li><a href="../java-programming/commands.html">Commands</a></li>
+					<li><a href="../java-programming/robotmap.html">RobotMap</a></li>
+					<li><a href="../java-programming/oi.html">OI</a></li>
+					<li><a href="../java-programming/robot.html">Robot.java</a></li>
 				</ul>
 			</li>
 			<li><a href="#">Git</a><button class="accordion"></button>
@@ -78,14 +78,13 @@
 		</div>
 		<div class="confoot">
 			<div class="content">
-				<h1>Installing Eclipse and Plugins</h1>
-				<p>Eclipse is the IDE (integrated development environment) required by FIRST for Java programming. "But why can't I use BlueJ, or some other IDE?" you might ask. First of all, Eclipse is an incredibly common Java IDE, and you will probably see it again in college and the professional world. It is always good to expand your horizons. Secondly, FIRST creates plugins specifically for Eclipse so that programming the robot can be much easier.</p>
-				<p>These plugins include a variety of utilities (described further in "Using Eclipse"):</p>
-				<ul>
-					<li>Templates for different robot designs</li>
-					<li>Use of the WPILib libraries</li>
-				</ul>
-				<p>The installation of Eclipse is also very well documented (I repeat, WITH PICTURES) in the <a href="https://wpilib.screenstepslive.com/s/4485/m/13809/l/599671-installing-the-frc-2017-update-suite-all-languages" target="_blank">WPI ScreenSteps</a>. Follow them to a tee and you will be all set.</p>
+				<h1>Power Distribution Panel</h1>
+				<p>While the roboRIO is like the brain of the robot, the Power Distribution Panel (PDP) is the heart. This is the component that takes all of the power from the 12 volt (V) battery and sends it to each part of the robot that needs it. Take a look:</p>
+				<img src="../Pictures/pdp.jpg" height="40%" width="40%" style="float:right;border:1px solid #858585;">
+				<p>Each pair of red and black ports supply power to a single device. The bigger ones are used for electronics that require more amperage (A), and the small ones are for ones that require less. The slits in the center are for fuses; the big ones hold 40A fuses and the small ones can hold 20 or 30A.</p>
+				<p>The giant positive and negative ports on the front end are where the wires from the battery plug in directly. Since the battery supplies 12V, all of the lines to the other components will also be supplying 12V. In order to change this, you will need a <a href="vrm.html">VRM</a>, but most of the components use 12V.</p>
+				<p>At the very end there are a bunch of tiny little ports. These are smaller power supplies to the roboRIO, PCM, VRM, and other components. They are each labeled and will supply the exact amount of current each piece needs. They can be opened by pressing a pointed object (such as a screwdriver or pen) on the white plastic.</p>
+				<p>Back at the front you will see 4 ports labeled "CAN". This is the end of the CAN bus that I had mentioned previously. The CAN bus is a way of transporting information through one long chain that starts at the roboRIO and ends at the PDP. In order to reduce reflection of the signal on the bus, there is a terminating resistor built into the PDP. That is why it is important that the signal ends here.</p>
 			</div>
 			<div class="footer">
 				<a href="../questions.html">Questions?</a>

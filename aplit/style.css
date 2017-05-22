@@ -171,8 +171,18 @@ html,body {
 .content h2 {
 	margin-bottom: 1%;
 }
+.content h3 {
+	margin: 0;
+}
+.content h4 {
+	margin: 0;
+	padding: 0;
+}
 .content p {
-	padding: .5% 0% .5% 0%;
+	padding: .25% 0% .25% 0%;
+}
+.content img {
+	margin-left: 1.5%;
 }
 
 .footer {
