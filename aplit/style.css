@@ -184,6 +184,9 @@ html,body {
 .content img {
 	margin-left: 1.5%;
 }
+.content pre {
+	border: 0px;
+}
 
 .footer {
 	background-color: #c9c9c9;

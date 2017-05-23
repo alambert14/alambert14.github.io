@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!-- ROBOT PROJECT -->
+<html>
+<head>
+	<title>Creating Your Robot Project</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	
+</head>
+<body>
+	<div class="top">
+	<div class="header">
+		How to Java:
+		<img src="../circles2.png">
+	</div>
+	
+	<div class="sticky-nav">
+		<ul class="clearfix">
+			<li><a href="../">Home</a></li>
+			<li><a href="../setting-up">Setting Up</a></li>
+			<li><a href="../control-system">FRC Control System</a></li>
+			<li><a href="../java-programming">Java Programming</a></li>
+			<li><a href="#">Git</a></li>
+		</ul>
+	</div>
+	</div>
+	
+	<div class="main">
+		<div class="nav">
+			<h2>Next: <a href="api.html">WPILib API</a></h2>
+		<ul class="dropdown">
+			<li><a href="../">Home</a></li>
+			<li><a href="../setting-up">Setting Up</a><button class="accordion"></button>
+				<ul class="panel">
+					<li><a href="../setting-up/update-suite.html">Installing the FRC Update Suite</a></li>
+					<li><a href="../setting-up/">Installing Java</a></li>
+					<li><a href="../setting-up/installing-eclipse.html">Installing Eclipse and Plugins</a></li>
+				</ul>
+			</li>
+			<li><a href="../control-system">FRC Control System</a><button class="accordion"></button>
+				<ul class="panel">
+					<li><a href="../control-system/roborio.html">roboRIO</a></li>
+					<li><a href="../control-system/pdp.html">Power Distribution Panel</a></li>
+					<li><a href="../control-system/speed-controllers.html">Speed Controllers</a></li>
+					<li><a href="../control-system/pneumatics.html">Pneumatics</a></li>
+					<li><a href="../control-system/vrm.html">VRM</a></li>
+					<li><a href="../control-system/radio.html">Wireless Radio</a></li>
+				</ul>
+			</li>
+			<li><a href="../java-programming">Java Programming</a><button class="accordion"></button>
+				<ul class="panel">
+					<li><a href="eclipse.html">Using Eclipse</a></li>
+					<li><a href="api.html">WPILib API</a></li>
+					<li><a href="#">Creating Your Robot Project</a></li>
+					<li><a href="subsystems.html">Subsystems</a></li>
+					<li><a href="commands.html">Commands</a></li>
+					<li><a href="robotmap.html">RobotMap</a></li>
+					<li><a href="oi.html">OI</a></li>
+					<li><a href="robot.html">Robot.java</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Git</a><button class="accordion"></button>
+				<ul class="panel">
+					<li><a href="#">Repositories</a></li>
+					<li><a href="#">GitHub</a></li>
+					<li><a href="#">Setting Up a Git Repository</a></li>
+					<li><a href="#">Branching</a></li>
+					<li><a href="#">Staging</a></li>
+					<li><a href="#">Committing</a></li>
+					<li><a href="#">Pushing and Pulling</a></li>
+					<li><a href="#">Merging</a></li>
+				</ul>
+			</li>
+		</ul>
+		</div>
+		<div class="confoot">
+			<div class="content">
+				<h1>Creating Your Robot Project</h1>
+				<p>As noted before, the FRC plugins allow you to start a working robot project in a matter of clicks! First, go to File > New > New Project (NOT "JAVA PROJECT"). From here you will select the type of project, and we will go with the <b>Robot Project</b>. We will use this because it already sets up a structure with all of the necessary packages and files. </p>
+				<p>When the project wizard pops up, make sure to check the button for a <b>Command-based Robot</b>. This type of structure will be described in detail later. While you have the option of programming with a different type of structure, command-based is the method that will be discussed in this guide, as that is the type 2035 has historically used in the past and is fairly easy to understand.</p>
+				<p><b>2035 TIP:</b> Over the past few years, the team has named our coding projects after the name of that years game, but with ludicrous synonyms instead, i.e. Aerial Assist = aeronautical-facilitation, Stronghold = tenacious-adhesion. The name of the code is entirely up to the leaders of the programming team; however, if you are looking for ideas, you are welcome to continue on this tradition. Just please, please do not name the code something offensive or stupid. This just reflects poorly on the team. You don't want to be in the situation in which you are explaining to a judge why your project is named "MemeMachine2018" (actually, that is a horrible example because I would applaud anyone bold enough implement that suggestion). </p>
+				<p>When the project is created, you should see in your project manager a new project with your chosen name that includes three packages. One will just be called "robot," and the other two should be "commands" and "subsystems." We will dive further into these later.</p>
+				
+
+			</div>
+			<div class="footer">
+				<a href="../questions.html">Questions?</a>
+				<a href="https://wpilib.screenstepslive.com/s/4485" target="_blank">WPI ScreenSteps Live</a>
+				<a href="http://first.wpi.edu/FRC/roborio/release/docs/java/" target="_blank">WPILib API</a>
+				<a href="http://team2035.rocks/" target="_blank">Team 2035's Website</a>
+			</div><!--footer-->
+		</div><!--confoot-->
+	
+	</div>
+	
+
+<script>
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+		acc[i].onclick = function(){
+			this.classList.toggle("active");
+			var panel = this.nextElementSibling;
+			if (panel.style.display === "block") {
+				panel.style.display = "none";
+			} else {
+				panel.style.display = "block";
+			}
+		}
+	}
+	</script>
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+	
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!-- EDIT -->
+<html>
+<head>
+	<title>Programming in Java</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	
+</head>
+<body>
+	<div class="top">
+	<div class="header">
+		How to Java:
+		<img src="../circles2.png">
+	</div>
+	
+	<div class="sticky-nav">
+		<ul class="clearfix">
+			<li><a href="../">Home</a></li>
+			<li><a href="../setting-up">Setting Up</a></li>
+			<li><a href="../control-system">FRC Control System</a></li>
+			<li><a href="#">Java Programming</a></li>
+			<li><a href="#">Git</a></li>
+		</ul>
+	</div>
+	</div>
+	
+	<div class="main">
+		<div class="nav">
+			<h2>Next: <a href="using-eclipse.html">Using Eclipse</a></h2>
+		<ul class="dropdown">
+			<li><a href="../">Home</a></li>
+			<li><a href="../setting-up">Setting Up</a><button class="accordion"></button>
+				<ul class="panel">
+					<li><a href="../setting-up/update-suite.html">Installing the FRC Update Suite</a></li>
+					<li><a href="../setting-up/">Installing Java</a></li>
+					<li><a href="../setting-up/installing-eclipse.html">Installing Eclipse and Plugins</a></li>
+				</ul>
+			</li>
+			<li><a href="../control-system">FRC Control System</a><button class="accordion"></button>
+				<ul class="panel">
+					<li><a href="../control-system/roborio.html">roboRIO</a></li>
+					<li><a href="../control-system/pdp.html">Power Distribution Panel</a></li>
+					<li><a href="../control-system/speed-controllers.html">Speed Controllers</a></li>
+					<li><a href="../control-system/pneumatics.html">Pneumatics</a></li>
+					<li><a href="../control-system/vrm.html">VRM</a></li>
+					<li><a href="../control-system/radio.html">Wireless Radio</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Java Programming</a><button class="accordion"></button>
+				<ul class="panel">
+					<li><a href="eclipse.html">Using Eclipse</a></li>
+					<li><a href="api.html">WPILib API</a></li>
+					<li><a href="subsystems.html">Subsystems</a></li>
+					<li><a href="commands.html">Commands</a></li>
+					<li><a href="robotmap.html">RobotMap</a></li>
+					<li><a href="oi.html">OI</a></li>
+					<li><a href="robot.html">Robot.java</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Git</a><button class="accordion"></button>
+				<ul class="panel">
+					<li><a href="#">Repositories</a></li>
+					<li><a href="#">GitHub</a></li>
+					<li><a href="#">Setting Up a Git Repository</a></li>
+					<li><a href="#">Branching</a></li>
+					<li><a href="#">Staging</a></li>
+					<li><a href="#">Committing</a></li>
+					<li><a href="#">Pushing and Pulling</a></li>
+					<li><a href="#">Merging</a></li>
+				</ul>
+			</li>
+		</ul>
+		</div>
+		<div class="confoot">
+			<div class="content">
+				<h1>Programming in Java</h1>
+				<p>Now it is time for the chapter we have all been waiting for; how to actually program all of this junk we've been talking about! Obviously, without code, the robot would be less of a robot and more of a hunk of metal or wood (or whatever floats your boat). Many of these methods are only suggestions, and as mentioned later, this guide will only discuss one model of FRC programming. Feel free to make your code as simplistic or complicated as you would like.</p>
+				<p><b>DISCLAIMER:</b> This part of the guide assumes that you have basic Java experience. There is not enough time or space to go over how to start writing Java from scratch. Start by pairing up with someone who is more experienced for your first time and learn as you go. If you have the chance, I would recommend the Java tutorials on Codecademy or taking AP Computer Science A if it's available to you.</p>
+			</div>
+			<div class="footer">
+				<a href="../questions.html">Questions?</a>
+				<a href="https://wpilib.screenstepslive.com/s/4485" target="_blank">WPI ScreenSteps Live</a>
+				<a href="http://first.wpi.edu/FRC/roborio/release/docs/java/" target="_blank">WPILib API</a>
+				<a href="http://team2035.rocks/" target="_blank">Team 2035's Website</a>
+			</div><!--footer-->
+		</div><!--confoot-->
+	
+	</div>
+	
+
+<script>
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+		acc[i].onclick = function(){
+			this.classList.toggle("active");
+			var panel = this.nextElementSibling;
+			if (panel.style.display === "block") {
+				panel.style.display = "none";
+			} else {
+				panel.style.display = "block";
+			}
+		}
+	}
+	</script>
+	
+</body>
+</html>
