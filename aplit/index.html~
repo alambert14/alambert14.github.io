@@ -40,7 +40,7 @@
 			</ul>
 		</div>
 		
-		<p><a href="/setting-up">setting up your environment</a></p>
+		<p>setting up your environment</p>
 	
 	</div></a>
 	<div class="section" id="page2"><!--
@@ -83,7 +83,7 @@
                                 <li><a href="/git/merging.html">Merging</a></li>
 			</ul>
 		</div>
-		<p><a href="/git">using GIT</a></p>
+		<p>using GIT</p>
 	</div>
 	<div class="footer">
 	</div>
