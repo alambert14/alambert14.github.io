@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!-- USING ECLIPSE -->
+<!-- ROBOT PROJECT -->
 <html>
 <head>
-	<title>Using Eclipse</title>
+	<title>Creating Your Robot Project</title>
 	<link rel="stylesheet" type="text/css" href="../style.css">
 	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet">
@@ -53,8 +53,9 @@
 			</li>
 			<li><a href="../java-programming">Java Programming</a><button class="accordion"></button>
 				<ul class="panel">
-					<li><a href="#">Using Eclipse</a></li>
+					<li><a href="eclipse.html">Using Eclipse</a></li>
 					<li><a href="api.html">WPILib API</a></li>
+					<li><a href="#">Creating Your Robot Project</a></li>
 					<li><a href="subsystems.html">Subsystems</a></li>
 					<li><a href="commands.html">Commands</a></li>
 					<li><a href="robotmap.html">RobotMap</a></li>
@@ -62,35 +63,29 @@
 					<li><a href="robot.html">Robot.java</a></li>
 				</ul>
 			</li>
-			<li><a href="../git">Git</a><button class="accordion"></button>
+			<li><a href="#">Git</a><button class="accordion"></button>
 				<ul class="panel">
-					<li><a href="../git/repositories.html">Repositories</a></li>
-					<li><a href="../git/github.html">GitHub</a></li>
-					<li><a href="../git/setting-up.html">Setting Up a Git Repository</a></li>
-					<li><a href="../git/branching">Branching</a></li>
-					<li><a href="../git/staging.html">Staging</a></li>
-					<li><a href="../committing.html">Committing</a></li>
-					<li><a href="../push-pull.html">Pushing and Pulling</a></li>
-					<li><a href="../merging.html">Merging</a></li>
+					<li><a href="#">Repositories</a></li>
+					<li><a href="#">GitHub</a></li>
+					<li><a href="#">Setting Up a Git Repository</a></li>
+					<li><a href="#">Branching</a></li>
+					<li><a href="#">Staging</a></li>
+					<li><a href="#">Committing</a></li>
+					<li><a href="#">Pushing and Pulling</a></li>
+					<li><a href="#">Merging</a></li>
 				</ul>
 			</li>
 		</ul>
 		</div>
 		<div class="confoot">
 			<div class="content">
-				<h1>Using Eclipse</h1>
-				<p>Eclipse is an incredibly common Integrated Development Environment (IDE) for Java. It includes many features, but we only use a couple for programming the robot. One of the ways in which Eclipse is very useful is its modular capabilities; the user can have multiple windows open with different properties. Here are some important ones that you need to know:</p>
-				<h4>Editing Window</h4>
-				<p>This is the main window in which all of the code is written. Each file recently opened will appear as a tab, and the code will appear below to be edited.</p>
-				<h4>Project Manager</h4>
-				<p>This is the window that shows all of the projects in the workspace and the packages and files they contain. This is how you can access each file you want to work on and organize them in a graphic interface.</p>
-				<h4>GIT</h4>
-				<p>There are multiple windows that facilitate the usage of Git with Eclipse. To learn more about Git, jump to <a href="#">this section</a> of the guide.</p>
-				<h4>Console</h4>
-				<p>Just like any compiler, Eclipse includes a console that alerts the programmer of any errors in the code and whether or not the program was able to build.</p>
-				<h4>RIO Log</h4>
-				<p>This module is included in the FRC Plugins, and is a console output for the roboRIO. This can be used to see text outputs from the code; it will NOT appear in the regular console.</p>
-				<p>Most of the personal settings that you might decide to alter are under Window > Preferences.</p>
+				<h1>Creating Your Robot Project</h1>
+				<p>As noted before, the FRC plugins allow you to start a working robot project in a matter of clicks! First, go to File > New > New Project (NOT "JAVA PROJECT"). From here you will select the type of project, and we will go with the <b>Robot Project</b>. We will use this because it already sets up a structure with all of the necessary packages and files. </p>
+				<p>When the project wizard pops up, make sure to check the button for a <b>Command-based Robot</b>. This type of structure will be described in detail later. While you have the option of programming with a different type of structure, command-based is the method that will be discussed in this guide, as that is the type 2035 has historically used in the past and is fairly easy to understand.</p>
+				<p><b>2035 TIP:</b> Over the past few years, the team has named our coding projects after the name of that years game, but with ludicrous synonyms instead, i.e. Aerial Assist = aeronautical-facilitation, Stronghold = tenacious-adhesion. The name of the code is entirely up to the leaders of the programming team; however, if you are looking for ideas, you are welcome to continue on this tradition. Just please, please do not name the code something offensive or stupid. This just reflects poorly on the team. You don't want to be in the situation in which you are explaining to a judge why your project is named "MemeMachine2018" (actually, that is a horrible example because I would applaud anyone bold enough implement that suggestion). </p>
+				<p>When the project is created, you should see in your project manager a new project with your chosen name that includes three packages. One will just be called "robot," and the other two should be "commands" and "subsystems." We will dive further into these later.</p>
+				
+
 			</div>
 			<div class="footer">
 				<a href="../questions.html">Questions?</a>
@@ -119,6 +114,7 @@
 		}
 	}
 	</script>
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 	
 </body>
 </html>

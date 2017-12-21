@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!-- VRM -->
+<!-- INSTALLING JAVA -->
 <html>
 <head>
-	<title>Voltage Regulator Module</title>
+	<title>Installing Java</title>
 	<link rel="stylesheet" type="text/css" href="../style.css">
 	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet">
@@ -31,24 +31,24 @@
 	
 	<div class="main">
 		<div class="nav">
-			<h2>Next: <a href="radio.html">Wireless Radio</a></h2>
+			<h2>Next: <a href="installing-eclipse.html">Installing Eclipse and Plugins</a></h2>
 		<ul class="dropdown">
 			<li><a href="../">Home</a></li>
 			<li><a href="../setting-up">Setting Up</a><button class="accordion"></button>
 				<ul class="panel">
-					<li><a href="../setting-up/update-suite.html">Installing the FRC Update Suite</a></li>
-					<li><a href="../setting-up/">Installing Java</a></li>
-					<li><a href="../setting-up/installing-eclipse.html">Installing Eclipse and Plugins</a></li>
+					<li><a href="update-suite.html">Installing the FRC Update Suite</a></li>
+					<li><a href="#">Installing Java</a></li>
+					<li><a href="installing-eclipse.html">Installing Eclipse and Plugins</a></li>
 				</ul>
 			</li>
 			<li><a href="../control-system">FRC Control System</a><button class="accordion"></button>
 				<ul class="panel">
-					<li><a href="roborio.html">roboRIO</a></li>
-					<li><a href="pdp.html">Power Distribution Panel</a></li>
-					<li><a href="speed-controllers.html">Speed Controllers</a></li>
-					<li><a href="pneumatics.html">Pneumatics</a></li>
-					<li><a href="#">VRM</a></li>
-					<li><a href="radio.html">Wireless Radio</a></li>
+					<li><a href="../control-system/roborio.html">roboRIO</a></li>
+					<li><a href="../control-system/pdp.html">Power Distribution Panel</a></li>
+					<li><a href="../control-system/speed-controllers.html">Speed Controllers</a></li>
+					<li><a href="../control-system/pneumatics.html">Pneumatics</a></li>
+					<li><a href="../control-system/VRM.html">VRM</a></li>
+					<li><a href="../control-system/radio.html">Wireless Radio</a></li>
 				</ul>
 			</li>
 			<li><a href="../java-programming">Java Programming</a><button class="accordion"></button>
@@ -62,25 +62,26 @@
 					<li><a href="../java-programming/robot.html">Robot.java</a></li>
 				</ul>
 			</li>
-			<li><a href="../git">Git</a><button class="accordion"></button>
+			<li><a href="#">Git</a><button class="accordion"></button>
 				<ul class="panel">
-					<li><a href="../git/repositories.html">Repositories</a></li>
-					<li><a href="../git/github.html">GitHub</a></li>
-					<li><a href="../git/setting-up.html">Setting Up a Git Repository</a></li>
-					<li><a href="../git/branching">Branching</a></li>
-					<li><a href="../git/staging.html">Staging</a></li>
-					<li><a href="../committing.html">Committing</a></li>
-					<li><a href="../push-pull.html">Pushing and Pulling</a></li>
-					<li><a href="../merging.html">Merging</a></li>
+					<li><a href="#">Repositories</a></li>
+					<li><a href="#">GitHub</a></li>
+					<li><a href="#">Setting Up a Git Repository</a></li>
+					<li><a href="#">Branching</a></li>
+					<li><a href="#">Staging</a></li>
+					<li><a href="#">Committing</a></li>
+					<li><a href="#">Pushing and Pulling</a></li>
+					<li><a href="#">Merging</a></li>
 				</ul>
 			</li>
 		</ul>
 		</div>
 		<div class="confoot">
 			<div class="content">
-				<h1>Voltage Regulator Module</h1>
-				<p>This component will be a quick one. The Voltage Regulator Module (VRM) isn't something that needs to be programmed, but it is important to know how it is necessary and what it can be used for. The VRM is a small component with a few ports that allows you to alter the voltage and current to meet the needs of certain electronics. The only voltage you will receive from the robot's battery is 12V. What if your Arduino, for example, only takes 5V? You couldn't imagine frying your Arduino! Fear not, because the VRM is here to help. Simply plug your Arduino into the 5V port and you are good to go. Having trouble finding the correct port? Just remember V = IR. Don't know what that means? Ask a sophomore or something (unless the new national science standards change who is and isn't allowed to take physics).</p>
-				<img src="../Pictures/vrm.jpg" height="50%" width="50%">
+				<h1>Installing Java</h1>
+				<p>In order to program in Java, it is super important that the Java JDK (Java Developer's Kit) is installed on your computer. One advantage of Java is that it is not platform specific, meaning you can use it with any type of computer; however, that means that you must download the specific version for your operating system. In a nutshell, it just needs to be downloaded from <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">Oracle</a> and then linked in Eclipse, which will be described in the next section.</p>
+				<p>However, Java also needs to be installed to the roboRIO (the computer on the robot). This is so that the Java code can be compiled on the robot itself. <a href="https://wpilib.screenstepslive.com/s/4485/m/13809/l/288822-installing-java-8-on-the-roborio-using-the-frc-roborio-java-installer-java-only" target="_blank">WPI Screen Steps</a> has steps for this as well, just follow them exactly. </p>
+				<img src="../Pictures/java.png" width="30%" height="30%">
 			</div>
 			<div class="footer">
 				<a href="../questions.html">Questions?</a>

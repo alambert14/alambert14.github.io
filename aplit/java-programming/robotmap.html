@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!-- USING ECLIPSE -->
+<!-- SUBSYSTEMS -->
 <html>
 <head>
-	<title>Using Eclipse</title>
+	<title>RobotMap</title>
 	<link rel="stylesheet" type="text/css" href="../style.css">
 	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet">
@@ -31,7 +31,7 @@
 	
 	<div class="main">
 		<div class="nav">
-			<h2>Next: <a href="api.html">WPILib API</a></h2>
+			<h2>Next: <a href="oi.html">OI</a></h2>
 		<ul class="dropdown">
 			<li><a href="../">Home</a></li>
 			<li><a href="../setting-up">Setting Up</a><button class="accordion"></button>
@@ -53,11 +53,12 @@
 			</li>
 			<li><a href="../java-programming">Java Programming</a><button class="accordion"></button>
 				<ul class="panel">
-					<li><a href="#">Using Eclipse</a></li>
+					<li><a href="eclipse.html">Using Eclipse</a></li>
 					<li><a href="api.html">WPILib API</a></li>
+					<li><a href="project.html">Creating Your Robot Project</a></li>
 					<li><a href="subsystems.html">Subsystems</a></li>
 					<li><a href="commands.html">Commands</a></li>
-					<li><a href="robotmap.html">RobotMap</a></li>
+					<li><a href="#">RobotMap</a></li>
 					<li><a href="oi.html">OI</a></li>
 					<li><a href="robot.html">Robot.java</a></li>
 				</ul>
@@ -78,19 +79,18 @@
 		</div>
 		<div class="confoot">
 			<div class="content">
-				<h1>Using Eclipse</h1>
-				<p>Eclipse is an incredibly common Integrated Development Environment (IDE) for Java. It includes many features, but we only use a couple for programming the robot. One of the ways in which Eclipse is very useful is its modular capabilities; the user can have multiple windows open with different properties. Here are some important ones that you need to know:</p>
-				<h4>Editing Window</h4>
-				<p>This is the main window in which all of the code is written. Each file recently opened will appear as a tab, and the code will appear below to be edited.</p>
-				<h4>Project Manager</h4>
-				<p>This is the window that shows all of the projects in the workspace and the packages and files they contain. This is how you can access each file you want to work on and organize them in a graphic interface.</p>
-				<h4>GIT</h4>
-				<p>There are multiple windows that facilitate the usage of Git with Eclipse. To learn more about Git, jump to <a href="#">this section</a> of the guide.</p>
-				<h4>Console</h4>
-				<p>Just like any compiler, Eclipse includes a console that alerts the programmer of any errors in the code and whether or not the program was able to build.</p>
-				<h4>RIO Log</h4>
-				<p>This module is included in the FRC Plugins, and is a console output for the roboRIO. This can be used to see text outputs from the code; it will NOT appear in the regular console.</p>
-				<p>Most of the personal settings that you might decide to alter are under Window > Preferences.</p>
+				<h1>RobotMap</h1>
+				<p>Now we're going to discuss all of the files that aren't commands or subsystems.  These fall under a package called robot, which is a parent package of robot.subsystems and robot.commands.  One of these files is called RobotMap, and it is incredibly useful.  This class just contains a bunch of public static methods that can be used throughout the robot program.  They are also usually constants, meaning that their value can only be changed in RobotMap itself.  You can have variables that store lots of things, such as:</p>
+                                <ul>
+                                        <li>PMW channel numbers</li>
+                                        <li>JoystickButtons</li>
+                                        <li>PCM IDs and channels</li>
+                                        <li>Other constants</li>
+                                </ul>
+                                <p>Most variables in RobotMap just look like this:</p>
+                                <pre class="prettyprent">
+                                public static final int F_LEFT_MOTOR_PWM = 2;</pre>
+                                <p>Make sure that the variable name is descriptive, and use proper conventions for constants (capital letters separated by underscores).</p>
 			</div>
 			<div class="footer">
 				<a href="../questions.html">Questions?</a>
@@ -119,6 +119,7 @@
 		}
 	}
 	</script>
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 	
 </body>
 </html>

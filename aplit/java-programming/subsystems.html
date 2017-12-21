@@ -2,7 +2,7 @@
 <!-- SUBSYSTEMS -->
 <html>
 <head>
-	<title>Creating Your Robot Project</title>
+	<title>Subsystems</title>
 	<link rel="stylesheet" type="text/css" href="../style.css">
 	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet">
@@ -63,16 +63,16 @@
 					<li><a href="robot.html">Robot.java</a></li>
 				</ul>
 			</li>
-			<li><a href="#">Git</a><button class="accordion"></button>
+			<li><a href="../git">Git</a><button class="accordion"></button>
 				<ul class="panel">
-					<li><a href="#">Repositories</a></li>
-					<li><a href="#">GitHub</a></li>
-					<li><a href="#">Setting Up a Git Repository</a></li>
-					<li><a href="#">Branching</a></li>
-					<li><a href="#">Staging</a></li>
-					<li><a href="#">Committing</a></li>
-					<li><a href="#">Pushing and Pulling</a></li>
-					<li><a href="#">Merging</a></li>
+					<li><a href="../git/repositories.html">Repositories</a></li>
+					<li><a href="../git/github.html">GitHub</a></li>
+					<li><a href="../git/setting-up.html">Setting Up a Git Repository</a></li>
+					<li><a href="../git/branching">Branching</a></li>
+					<li><a href="../git/staging.html">Staging</a></li>
+					<li><a href="../committing.html">Committing</a></li>
+					<li><a href="../push-pull.html">Pushing and Pulling</a></li>
+					<li><a href="../merging.html">Merging</a></li>
 				</ul>
 			</li>
 		</ul>
@@ -83,7 +83,7 @@
 				<p>On a command-based robot, the code is broken up a certain way. Basically, most files are either "subsystems" or "commands." We'll start by learning what a subsystem is and what they are used for. A subsystem is a class (one Java file) that represents a physical part of the robot. If you think of the robot as one system, each part of it can be considered a subsystem. For example, your robot might have an arm mechanism on the front. You could represent this part of the robot in the code as a subsystem class called Arm.java. Or, if you even had an ultrasonic sensor on the robot, it could have its own subsystem as well. You can have as many subsystems as you would like, depending on how organized you want the code to be. I recommend having one for each mechanism on the robot, just to keep it simple.</p>
 				<p>The purpose of the subsystem class is to contain all of the methods needed for that mechanism. If we return to the Arm example, an Arm subsystem might have a method to lift it up() or down() or activate an intake() motor. These methods are where all of the magic happens; it is where the components of the robot are actually programmed. Here is the basic structure of a subsystem class:</p>
 				<pre class="prettyprent">
-					package org.usfirst.frc.team0000.robot.subsystems;
+			        package org.usfirst.frc.team0000.robot.subsystems;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.VictorSP;
 

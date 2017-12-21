@@ -62,16 +62,16 @@
 					<li><a href="../java-programming/api.html">Robot.java</a></li>
 				</ul>
 			</li>
-			<li><a href="../git">Git</a><button class="accordion"></button>
+			<li><a href="#">Git</a><button class="accordion"></button>
 				<ul class="panel">
-					<li><a href="../git/repositories.html">Repositories</a></li>
-					<li><a href="../git/github.html">GitHub</a></li>
-					<li><a href="../git/setting-up.html">Setting Up a Git Repository</a></li>
-					<li><a href="../git/branching">Branching</a></li>
-					<li><a href="../git/staging.html">Staging</a></li>
-					<li><a href="../committing.html">Committing</a></li>
-					<li><a href="../push-pull.html">Pushing and Pulling</a></li>
-					<li><a href="../merging.html">Merging</a></li>
+					<li><a href="#">Repositories</a></li>
+					<li><a href="#">GitHub</a></li>
+					<li><a href="#">Setting Up a Git Repository</a></li>
+					<li><a href="#">Branching</a></li>
+					<li><a href="#">Staging</a></li>
+					<li><a href="#">Committing</a></li>
+					<li><a href="#">Pushing and Pulling</a></li>
+					<li><a href="#">Merging</a></li>
 				</ul>
 			</li>
 		</ul>

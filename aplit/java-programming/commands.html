@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!-- SUBSYSTEMS -->
+<html>
+<head>
+	<title>Commands</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	
+</head>
+<body>
+	<div class="top">
+	<div class="header">
+		How to Java:
+		<img src="../circles2.png">
+	</div>
+	
+	<div class="sticky-nav">
+		<ul class="clearfix">
+			<li><a href="../">Home</a></li>
+			<li><a href="../setting-up">Setting Up</a></li>
+			<li><a href="../control-system">FRC Control System</a></li>
+			<li><a href="../java-programming">Java Programming</a></li>
+			<li><a href="#">Git</a></li>
+		</ul>
+	</div>
+	</div>
+	
+	<div class="main">
+		<div class="nav">
+			<h2>Next: <a href="robotmap.html">RobotMap</a></h2>
+		<ul class="dropdown">
+			<li><a href="../">Home</a></li>
+			<li><a href="../setting-up">Setting Up</a><button class="accordion"></button>
+				<ul class="panel">
+					<li><a href="../setting-up/update-suite.html">Installing the FRC Update Suite</a></li>
+					<li><a href="../setting-up/">Installing Java</a></li>
+					<li><a href="../setting-up/installing-eclipse.html">Installing Eclipse and Plugins</a></li>
+				</ul>
+			</li>
+			<li><a href="../control-system">FRC Control System</a><button class="accordion"></button>
+				<ul class="panel">
+					<li><a href="../control-system/roborio.html">roboRIO</a></li>
+					<li><a href="../control-system/pdp.html">Power Distribution Panel</a></li>
+					<li><a href="../control-system/speed-controllers.html">Speed Controllers</a></li>
+					<li><a href="../control-system/pneumatics.html">Pneumatics</a></li>
+					<li><a href="../control-system/vrm.html">VRM</a></li>
+					<li><a href="../control-system/radio.html">Wireless Radio</a></li>
+				</ul>
+			</li>
+			<li><a href="../java-programming">Java Programming</a><button class="accordion"></button>
+				<ul class="panel">
+					<li><a href="eclipse.html">Using Eclipse</a></li>
+					<li><a href="api.html">WPILib API</a></li>
+					<li><a href="project.html">Creating Your Robot Project</a></li>
+					<li><a href="subsystems.html">Subsystems</a></li>
+					<li><a href="#">Commands</a></li>
+					<li><a href="robotmap.html">RobotMap</a></li>
+					<li><a href="oi.html">OI</a></li>
+					<li><a href="robot.html">Robot.java</a></li>
+				</ul>
+			</li>
+			<li><a href="../git">Git</a><button class="accordion"></button>
+				<ul class="panel">
+					<li><a href="../git/repositories.html">Repositories</a></li>
+					<li><a href="../git/github.html">GitHub</a></li>
+					<li><a href="../git/setting-up.html">Setting Up a Git Repository</a></li>
+					<li><a href="../git/branching">Branching</a></li>
+					<li><a href="../git/staging.html">Staging</a></li>
+					<li><a href="../committing.html">Committing</a></li>
+					<li><a href="../push-pull.html">Pushing and Pulling</a></li>
+					<li><a href="../merging.html">Merging</a></li>
+				</ul>
+			</li>
+		</ul>
+		</div>
+		<div class="confoot">
+			<div class="content">
+				<h1>Commands</h1>
+				<p>Commands are like an executable manifestation of those methods you wrote in your subsystem.  "Why can't you just call those methods?" you may ask.  I mean, you could in the code itself, but it is impossible to execute those methods with a Joystick Button, for example, without creating a Command class.  This is just how the command-based structure works, and we will explain how to execute commands later on.  For now, we will go over the basic structure of a command class and what goes where.  Here is a basic example:</p>
+                                <pre class="prettyprent">
+                                package org.usfirst.frc.team0000.robot.commands;
+import edu.wpi.first.wpilibj.command.Command;
+import org.usfirst.frc.team0000.robot.subsystems.MySubsystem;
+
+public class MyCommand extends Command {
+
+    public static OI oi;
+    private MySubsystem sub;
+
+    public MyCommand() {
+        super("Command name");
+        sub = Robot.getSubsystem();
+        requires(sub);
+    }
+
+    protected void intialize() {
+        oi = new OI();
+    }
+    
+    protected void execute() {
+        sub.aMethod();
+    }
+
+    protected boolean isFinished() {
+        return false;
+    }
+
+    protected void end() {
+        sub.anotherMethod();
+    }
+}</pre>
+                                <p>Let's break this down bit by bit.</p>
+                                <pre class="prettyprent">
+                                package org.usfirst.frc.team0000.robot.commands;
+import edu.wpi.first.wpilibj.command.Command;
+import org.usfirst.frc.team0000.robot.subsystems.MySubsystem;
+Import org.usfirst.frc.team0000.robot.Robot;</pre>
+                                <p>Just like in the subsystem (and every class) we have our package and imports.  In this case, we are importing the Command class from WPILib, and that subsystem we wrote before from our own files.  That will allow us to make a variable to store the subsystem in so we can have access to its private methods.  We also import our Robot.java file that will be discussed in a <a href="robot.html">later section</a>.</p>
+                                <pre class="prettyprent">
+                                public static OI oi;
+private MySubsystem sub;</pre>
+                                <p>Here are our instance variables!  The first one is an OI object, which we will discuss later on.  To be quite honest, I don't know why we make an OI object in each command.  It probably isn't even necessary, but it certainly hasn't done any harm.  If someone wants to remove this variable from all of their commands and let me know if it still works, I will update this portion of the tutorial.</p>
+                                <pre>
+                                public MyCommand() {
+    super("Command name");
+    sub = Robot.getSubsystem();
+    requires(sub);
+}</pre>
+                                <p>This is the constructor.  Just like before, there is a call to super that just allows us to name the command.  We are also going to initialize our subsystem variable to something you might not recognize.  We haven't gone over the structure of the Robot.java file yet; however, that is where all of the subsystems are initialized, and we are basically implementing a getter method in order to access it and use it in our command.  This is the way we avoid creating multiple instances of each subsystem.</p>
+                                <p>"requires()" is a really important line in the command code.  It basically is saying that the command cannot run unless a certain subsystem exists.  That is because the command utilizes the methods in that subsystem.  In this example, we are "requiring" MySubsystem.</p>
+                                <pre class="prettyprent">
+                                protected void intialize() {
+    oi = new OI();
+}</pre>
+                                <p>This initializing method is simply called when the command is first created.  We don't really utilize this except to initialize that OI object that I really don't know what is for.</p>
+                                <pre class="prettyprent">
+                                protected void execute() {
+    sub.aMethod();
+}</pre>
+                                <p>This method does exactly what you think it does: it executes the command when time (a button is pressed, etc).  Inside of this method is where you would call methods from the subsystem.  It will continue to loop until the command is finished.</p>
+                                <pre class="prettyprent">
+                                protected boolean isFinished() {
+    return false;
+}</pre>
+                                <p>This method is kinda funky.  isFinished determines how long a command will loop, basically.  Usually, for button commands, you will return false because you want the command to loop until it is interrupted (another button is pressed or released).  However, if your command for a toggle button, such as a switch to turn a motor on and off, you will want to return true so it only flips one time.</p>
+                                <pre class="prettyprent">
+                                protected void end() {
+    sub.anotherMethod();
+}
+protected void interrupted() {
+    sub.anotherMethod();
+}</pre>
+                                <p>These two methods are basically the same; they are run when the command is terminated.  Usually you will want to call a method from the subsystem that either stops a motor (as in this case) or returns a solenoid to a neutral position.  There can be others, but these are usually the most common.</p>
+                                <p>We've made it through our first command!  Now it is time to look at the overarching structure of the robot code itself...</p>
+
+			</div>
+			<div class="footer">
+				<a href="../questions.html">Questions?</a>
+				<a href="https://wpilib.screenstepslive.com/s/4485" target="_blank">WPI ScreenSteps Live</a>
+				<a href="http://first.wpi.edu/FRC/roborio/release/docs/java/" target="_blank">WPILib API</a>
+				<a href="http://team2035.rocks/" target="_blank">Team 2035's Website</a>
+			</div><!--footer-->
+		</div><!--confoot-->
+	
+	</div>
+	
+
+<script>
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+		acc[i].onclick = function(){
+			this.classList.toggle("active");
+			var panel = this.nextElementSibling;
+			if (panel.style.display === "block") {
+				panel.style.display = "none";
+			} else {
+				panel.style.display = "block";
+			}
+		}
+	}
+	</script>
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+	
+</body>
+</html>

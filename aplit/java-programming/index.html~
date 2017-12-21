@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!-- USING ECLIPSE -->
+<!-- JAVA PROGRAMMING -->
 <html>
 <head>
-	<title>Using Eclipse</title>
+	<title>Programming in Java</title>
 	<link rel="stylesheet" type="text/css" href="../style.css">
 	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet">
@@ -23,7 +23,7 @@
 			<li><a href="../">Home</a></li>
 			<li><a href="../setting-up">Setting Up</a></li>
 			<li><a href="../control-system">FRC Control System</a></li>
-			<li><a href="../java-programming">Java Programming</a></li>
+			<li><a href="#">Java Programming</a></li>
 			<li><a href="#">Git</a></li>
 		</ul>
 	</div>
@@ -31,7 +31,7 @@
 	
 	<div class="main">
 		<div class="nav">
-			<h2>Next: <a href="api.html">WPILib API</a></h2>
+			<h2>Next: <a href="eclipse.html">Using Eclipse</a></h2>
 		<ul class="dropdown">
 			<li><a href="../">Home</a></li>
 			<li><a href="../setting-up">Setting Up</a><button class="accordion"></button>
@@ -51,9 +51,9 @@
 					<li><a href="../control-system/radio.html">Wireless Radio</a></li>
 				</ul>
 			</li>
-			<li><a href="../java-programming">Java Programming</a><button class="accordion"></button>
+			<li><a href="#">Java Programming</a><button class="accordion"></button>
 				<ul class="panel">
-					<li><a href="#">Using Eclipse</a></li>
+					<li><a href="eclipse.html">Using Eclipse</a></li>
 					<li><a href="api.html">WPILib API</a></li>
 					<li><a href="subsystems.html">Subsystems</a></li>
 					<li><a href="commands.html">Commands</a></li>
@@ -62,35 +62,25 @@
 					<li><a href="robot.html">Robot.java</a></li>
 				</ul>
 			</li>
-			<li><a href="../git">Git</a><button class="accordion"></button>
+			<li><a href="#">Git</a><button class="accordion"></button>
 				<ul class="panel">
-					<li><a href="../git/repositories.html">Repositories</a></li>
-					<li><a href="../git/github.html">GitHub</a></li>
-					<li><a href="../git/setting-up.html">Setting Up a Git Repository</a></li>
-					<li><a href="../git/branching">Branching</a></li>
-					<li><a href="../git/staging.html">Staging</a></li>
-					<li><a href="../committing.html">Committing</a></li>
-					<li><a href="../push-pull.html">Pushing and Pulling</a></li>
-					<li><a href="../merging.html">Merging</a></li>
+					<li><a href="#">Repositories</a></li>
+					<li><a href="#">GitHub</a></li>
+					<li><a href="#">Setting Up a Git Repository</a></li>
+					<li><a href="#">Branching</a></li>
+					<li><a href="#">Staging</a></li>
+					<li><a href="#">Committing</a></li>
+					<li><a href="#">Pushing and Pulling</a></li>
+					<li><a href="#">Merging</a></li>
 				</ul>
 			</li>
 		</ul>
 		</div>
 		<div class="confoot">
 			<div class="content">
-				<h1>Using Eclipse</h1>
-				<p>Eclipse is an incredibly common Integrated Development Environment (IDE) for Java. It includes many features, but we only use a couple for programming the robot. One of the ways in which Eclipse is very useful is its modular capabilities; the user can have multiple windows open with different properties. Here are some important ones that you need to know:</p>
-				<h4>Editing Window</h4>
-				<p>This is the main window in which all of the code is written. Each file recently opened will appear as a tab, and the code will appear below to be edited.</p>
-				<h4>Project Manager</h4>
-				<p>This is the window that shows all of the projects in the workspace and the packages and files they contain. This is how you can access each file you want to work on and organize them in a graphic interface.</p>
-				<h4>GIT</h4>
-				<p>There are multiple windows that facilitate the usage of Git with Eclipse. To learn more about Git, jump to <a href="#">this section</a> of the guide.</p>
-				<h4>Console</h4>
-				<p>Just like any compiler, Eclipse includes a console that alerts the programmer of any errors in the code and whether or not the program was able to build.</p>
-				<h4>RIO Log</h4>
-				<p>This module is included in the FRC Plugins, and is a console output for the roboRIO. This can be used to see text outputs from the code; it will NOT appear in the regular console.</p>
-				<p>Most of the personal settings that you might decide to alter are under Window > Preferences.</p>
+				<h1>Programming in Java</h1>
+				<p>Now it is time for the chapter we have all been waiting for; how to actually program all of this junk we've been talking about! Obviously, without code, the robot would be less of a robot and more of a hunk of metal or wood (or whatever floats your boat). Many of these methods are only suggestions, and as mentioned later, this guide will only discuss one model of FRC programming. Feel free to make your code as simplistic or complicated as you would like.</p>
+				<p><b>DISCLAIMER:</b> This part of the guide assumes that you have basic Java experience. There is not enough time or space to go over how to start writing Java from scratch. Start by pairing up with someone who is more experienced for your first time and learn as you go. If you have the chance, I would recommend the Java tutorials on Codecademy or taking AP Computer Science A if it's available to you.</p>
 			</div>
 			<div class="footer">
 				<a href="../questions.html">Questions?</a>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- ROBOT PROJECT -->
+<!-- SUBSYSTEMS -->
 <html>
 <head>
 	<title>Creating Your Robot Project</title>
@@ -31,7 +31,7 @@
 	
 	<div class="main">
 		<div class="nav">
-			<h2>Next: <a href="api.html">WPILib API</a></h2>
+			<h2>Next: <a href="commands.html">Commands</a></h2>
 		<ul class="dropdown">
 			<li><a href="../">Home</a></li>
 			<li><a href="../setting-up">Setting Up</a><button class="accordion"></button>
@@ -55,8 +55,8 @@
 				<ul class="panel">
 					<li><a href="eclipse.html">Using Eclipse</a></li>
 					<li><a href="api.html">WPILib API</a></li>
-					<li><a href="#">Creating Your Robot Project</a></li>
-					<li><a href="subsystems.html">Subsystems</a></li>
+					<li><a href="project.html">Creating Your Robot Project</a></li>
+					<li><a href="#">Subsystems</a></li>
 					<li><a href="commands.html">Commands</a></li>
 					<li><a href="robotmap.html">RobotMap</a></li>
 					<li><a href="oi.html">OI</a></li>
@@ -79,12 +79,64 @@
 		</div>
 		<div class="confoot">
 			<div class="content">
-				<h1>Creating Your Robot Project</h1>
-				<p>As noted before, the FRC plugins allow you to start a working robot project in a matter of clicks! First, go to File > New > New Project (NOT "JAVA PROJECT"). From here you will select the type of project, and we will go with the <b>Robot Project</b>. We will use this because it already sets up a structure with all of the necessary packages and files. </p>
-				<p>When the project wizard pops up, make sure to check the button for a <b>Command-based Robot</b>. This type of structure will be described in detail later. While you have the option of programming with a different type of structure, command-based is the method that will be discussed in this guide, as that is the type 2035 has historically used in the past and is fairly easy to understand.</p>
-				<p><b>2035 TIP:</b> Over the past few years, the team has named our coding projects after the name of that years game, but with ludicrous synonyms instead, i.e. Aerial Assist = aeronautical-facilitation, Stronghold = tenacious-adhesion. The name of the code is entirely up to the leaders of the programming team; however, if you are looking for ideas, you are welcome to continue on this tradition. Just please, please do not name the code something offensive or stupid. This just reflects poorly on the team. You don't want to be in the situation in which you are explaining to a judge why your project is named "MemeMachine2018" (actually, that is a horrible example because I would applaud anyone bold enough implement that suggestion). </p>
-				<p>When the project is created, you should see in your project manager a new project with your chosen name that includes three packages. One will just be called "robot," and the other two should be "commands" and "subsystems." We will dive further into these later.</p>
-				
+				<h1>Subsystems</h1>
+				<p>On a command-based robot, the code is broken up a certain way. Basically, most files are either "subsystems" or "commands." We'll start by learning what a subsystem is and what they are used for. A subsystem is a class (one Java file) that represents a physical part of the robot. If you think of the robot as one system, each part of it can be considered a subsystem. For example, your robot might have an arm mechanism on the front. You could represent this part of the robot in the code as a subsystem class called Arm.java. Or, if you even had an ultrasonic sensor on the robot, it could have its own subsystem as well. You can have as many subsystems as you would like, depending on how organized you want the code to be. I recommend having one for each mechanism on the robot, just to keep it simple.</p>
+				<p>The purpose of the subsystem class is to contain all of the methods needed for that mechanism. If we return to the Arm example, an Arm subsystem might have a method to lift it up() or down() or activate an intake() motor. These methods are where all of the magic happens; it is where the components of the robot are actually programmed. Here is the basic structure of a subsystem class:</p>
+				<pre class="prettyprent">
+			        package org.usfirst.frc.team0000.robot.subsystems;
+import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.VictorSP;
+
+public class MySubsystem extends Subsystem {
+
+	private VictorSP motor;
+	public MySubsystem() {
+		super("My Subsystem");
+		motor = new VictorSP(0);
+	}
+
+	public void aMethod() {
+		motor.set(.5);
+	}
+
+	public void anotherMethod() {
+		motor.set(0);
+	}
+
+	public void initDefaultCommand() {
+
+	}
+}
+</pre>
+				<p>Amazing. Now, you might be wondering what a lot of that gobletygook means, so I am here to explain.</p>
+				<pre class="prettyprint">
+				import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.VictorSP;
+
+public class MySubsystem extends Subsystem {
+</pre>
+				<p>First off, we need to import some classes from our friend, the WPILib. The subsystem class will be the parent of our class, so that the robot knows this class is a subsystem. A Victor SP is just a type of speed controller that we will use as an example in this class. In the next line, you can see that in the class extends Subsystem, meaning that this class is now a subsystem and will have to have certain requirements. </p>
+				<pre class="prettyprint">
+				private VictorSP motor;
+public MySubsystem() {
+	super("My Subsystem");
+	motor = new VictorSP(0);
+}
+</pre>
+				<p>The first line just declares a Victor object that we can program later on. As you can see, it is initialized in the constructor. Its only parameter is an integer that represents the channel it is plugged into (but you knew that because you looked it up in the API). Also in the constructor is a call to super, or in this case, Subsystem. The only parameter is the name of the subsystem, which isn't actually used for anything but convention. </p>
+				<pre class="prettyprint">
+				public void aMethod() {
+	motor.set(.5);
+}
+</pre>
+				<p>This is an example of a method you could write for the robot to execute. In this case, it spins a motor at half speed when this method is called.</p>
+				<pre class="prettyprint">
+				public void initDefaultCommand() {
+
+}
+</pre>
+				<p>This is a method that every subsystem is required to have. To be honest, I'm not exactly sure how to utilize it (I think it sets the default command for this subsystem), and I've found it to be completely useless for our purposes. Therefore, I would suggest ignoring it.</p>
+				<p>Now that we've gone through the basics of what a subsystem is, we can explore how their methods are utilized through commands!</p>
 
 			</div>
 			<div class="footer">

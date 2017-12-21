@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!-- SPEED CONTROLLERS -->
+<!-- VRM -->
 <html>
 <head>
-	<title>Speed Controllers</title>
+	<title>Voltage Regulator Module</title>
 	<link rel="stylesheet" type="text/css" href="../style.css">
 	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet">
@@ -31,7 +31,7 @@
 	
 	<div class="main">
 		<div class="nav">
-			<h2>Next: <a href="pneumatics.html">Pneumatic System</a></h2>
+			<h2>Next: <a href="radio.html">Wireless Radio</a></h2>
 		<ul class="dropdown">
 			<li><a href="../">Home</a></li>
 			<li><a href="../setting-up">Setting Up</a><button class="accordion"></button>
@@ -45,9 +45,9 @@
 				<ul class="panel">
 					<li><a href="roborio.html">roboRIO</a></li>
 					<li><a href="pdp.html">Power Distribution Panel</a></li>
-					<li><a href="#">Speed Controllers</a></li>
+					<li><a href="speed-controllers.html">Speed Controllers</a></li>
 					<li><a href="pneumatics.html">Pneumatics</a></li>
-					<li><a href="vrm.html">VRM</a></li>
+					<li><a href="#">VRM</a></li>
 					<li><a href="radio.html">Wireless Radio</a></li>
 				</ul>
 			</li>
@@ -62,30 +62,25 @@
 					<li><a href="../java-programming/robot.html">Robot.java</a></li>
 				</ul>
 			</li>
-			<li><a href="../git">Git</a><button class="accordion"></button>
+			<li><a href="#">Git</a><button class="accordion"></button>
 				<ul class="panel">
-					<li><a href="../git/repositories.html">Repositories</a></li>
-					<li><a href="../git/github.html">GitHub</a></li>
-					<li><a href="../git/setting-up.html">Setting Up a Git Repository</a></li>
-					<li><a href="../git/branching">Branching</a></li>
-					<li><a href="../git/staging.html">Staging</a></li>
-					<li><a href="../committing.html">Committing</a></li>
-					<li><a href="../push-pull.html">Pushing and Pulling</a></li>
-					<li><a href="../merging.html">Merging</a></li>
+					<li><a href="#">Repositories</a></li>
+					<li><a href="#">GitHub</a></li>
+					<li><a href="#">Setting Up a Git Repository</a></li>
+					<li><a href="#">Branching</a></li>
+					<li><a href="#">Staging</a></li>
+					<li><a href="#">Committing</a></li>
+					<li><a href="#">Pushing and Pulling</a></li>
+					<li><a href="#">Merging</a></li>
 				</ul>
 			</li>
 		</ul>
 		</div>
 		<div class="confoot">
 			<div class="content">
-				<h1>Speed (Motor) Controllers</h1>
-				<p>Speed controllers are one of the most common components on the robot, and one of the ones you will actually be programming. For a quick overview, check out this powerpoint:</p>
-				<p>Speed controllers come in many flavors, but the most common (at least for Team 2035) these days are Victor SPs (shown) and Talon SRXs. They look very similar, but it is important not to confuse them. Talons are a lot more expensive, but they have much more capabilities. However, Victors are perfectly okay for basic speed controller functionality.</p>
-				<img src="../Pictures/victorsp.jpg" height="33%" width="33%" style="float:right">
-				<p>So this begs the question: what do speed controllers even do? To be frank, they control the speed of a motor. More specifically, they allow a motor to be programmable, as they would not be otherwise. It would be pretty difficult to program a raw motor (it probably would include some sort of binary or something), but with a speed controller, you can set an exact decimal speed from -1 to 1. The way it does this is pretty simple, using what is called PWM control.</p>
-				<p>PWM stands for Pulse Width Modulation. This means that instead of sending one constant stream of current to the motor, the controller pulses the electricity in order to create an illusion of the motor moving consistently at a slower pace. This is why speed controllers are connected to the roboRIO through PWM cables that allow the programming data to be sent to the controller.</p>
-				<p>We will go over how to program a speed controller in depth later on, but first it is important to try and understand how the component works.</p>
-				
+				<h1>Voltage Regulator Module</h1>
+				<p>This component will be a quick one. The Voltage Regulator Module (VRM) isn't something that needs to be programmed, but it is important to know how it is necessary and what it can be used for. The VRM is a small component with a few ports that allows you to alter the voltage and current to meet the needs of certain electronics. The only voltage you will receive from the robot's battery is 12V. What if your Arduino, for example, only takes 5V? You couldn't imagine frying your Arduino! Fear not, because the VRM is here to help. Simply plug your Arduino into the 5V port and you are good to go. Having trouble finding the correct port? Just remember V = IR. Don't know what that means? Ask a sophomore or something (unless the new national science standards change who is and isn't allowed to take physics).</p>
+				<img src="../Pictures/vrm.jpg" height="50%" width="50%">
 			</div>
 			<div class="footer">
 				<a href="../questions.html">Questions?</a>
