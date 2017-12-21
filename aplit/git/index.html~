@@ -2,7 +2,7 @@
 <!-- EDIT -->
 <html>
 <head>
-	<title>Git</title>
+	<title>Programming in Java</title>
 	<link rel="stylesheet" type="text/css" href="../style.css">
 	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet">
@@ -23,7 +23,7 @@
 			<li><a href="../">Home</a></li>
 			<li><a href="../setting-up">Setting Up</a></li>
 			<li><a href="../control-system">FRC Control System</a></li>
-			<li><a href="../java-programming">Java Programming</a></li>
+			<li><a href="#">Java Programming</a></li>
 			<li><a href="#">Git</a></li>
 		</ul>
 	</div>
@@ -51,37 +51,36 @@
 					<li><a href="../control-system/radio.html">Wireless Radio</a></li>
 				</ul>
 			</li>
-			<li><a href="../java-programming">Java Programming</a><button class="accordion"></button>
+			<li><a href="#">Java Programming</a><button class="accordion"></button>
 				<ul class="panel">
-					<li><a href="../java-programming/eclipse.html">Using Eclipse</a></li>
-					<li><a href="../java-programming/api.html">WPILib API</a></li>
-					<li><a href="../java-programming/subsystems.html">Subsystems</a></li>
-					<li><a href="../java-programming/commands.html">Commands</a></li>
-					<li><a href="../java-programming/robotmap.html">RobotMap</a></li>
-					<li><a href="../java-programming/oi.html">OI</a></li>
-					<li><a href="../java-programming/robot.html">Robot.java</a></li>
+					<li><a href="eclipse.html">Using Eclipse</a></li>
+					<li><a href="api.html">WPILib API</a></li>
+					<li><a href="subsystems.html">Subsystems</a></li>
+					<li><a href="commands.html">Commands</a></li>
+					<li><a href="robotmap.html">RobotMap</a></li>
+					<li><a href="oi.html">OI</a></li>
+					<li><a href="robot.html">Robot.java</a></li>
 				</ul>
 			</li>
 			<li><a href="#">Git</a><button class="accordion"></button>
 				<ul class="panel">
-					<li><a href="repositories.html">Repositories</a></li>
-					<li><a href="github.html">GitHub</a></li>
-					<li><a href="setting-up.html">Setting Up a Git Repository</a></li>
-					<li><a href="branching.html">Branching</a></li>
-					<li><a href="staging.html">Staging</a></li>
-					<li><a href="committing.html">Committing</a></li>
-					<li><a href="push-pull.html">Pushing and Pulling</a></li>
-					<li><a href="merging.html">Merging</a></li>
+					<li><a href="#">Repositories</a></li>
+					<li><a href="#">GitHub</a></li>
+					<li><a href="#">Setting Up a Git Repository</a></li>
+					<li><a href="#">Branching</a></li>
+					<li><a href="#">Staging</a></li>
+					<li><a href="#">Committing</a></li>
+					<li><a href="#">Pushing and Pulling</a></li>
+					<li><a href="#">Merging</a></li>
 				</ul>
 			</li>
 		</ul>
 		</div>
 		<div class="confoot">
 			<div class="content">
-				<h1>Git</h1>
-				<p>The thing about programming a robot is that it's hard to do on your own. There are so many moving parts and you only have six weeks to go! This is why collaboration is key, and Git is a program which provides the means to do so. A good way to think of Git is as a tool that allows you to download code from the cloud, and so can others. This way, multiple collaborators can download the same code, make changes, and send the code back to the cloud for others to see. However, you might see this can get complicated: if two people make different changes to the same code, which one is saved?</p>
-                                <p>You can download git <a href="https://git-scm.com/downloads" target="_blank">here</a>. It is important that it is installed on each computer that will be collaborating. When Eclipse is downloaded, Git should be integrated into the IDE, making it much easier to use and understand.</p>
-                                <p>If this guide ends up being incomprehensible (as it very well may be), then I would also recommend the Codecademy tutorials for Git. These are all based in a Unix command line, but it is definitely helpful in terms of understanding the concepts needed to use Git effectively. The truth about Git is that it really just takes practice, practice, and more practice. However, it is a widely used tool that will be very helpful for future internships, jobs, or personal projects!</p>
+				<h1>Programming in Java</h1>
+				<p>Now it is time for the chapter we have all been waiting for; how to actually program all of this junk we've been talking about! Obviously, without code, the robot would be less of a robot and more of a hunk of metal or wood (or whatever floats your boat). Many of these methods are only suggestions, and as mentioned later, this guide will only discuss one model of FRC programming. Feel free to make your code as simplistic or complicated as you would like.</p>
+				<p><b>DISCLAIMER:</b> This part of the guide assumes that you have basic Java experience. There is not enough time or space to go over how to start writing Java from scratch. Start by pairing up with someone who is more experienced for your first time and learn as you go. If you have the chance, I would recommend the Java tutorials on Codecademy or taking AP Computer Science A if it's available to you.</p>
 			</div>
 			<div class="footer">
 				<a href="../questions.html">Questions?</a>
