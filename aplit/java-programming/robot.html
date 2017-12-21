@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<!-- SUBSYSTEMS -->
+<html>
+<head>
+	<title>Robot.java</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	
+</head>
+<body>
+	<div class="top">
+	<div class="header">
+		How to Java:
+		<img src="../circles2.png">
+	</div>
+	
+	<div class="sticky-nav">
+		<ul class="clearfix">
+			<li><a href="../">Home</a></li>
+			<li><a href="../setting-up">Setting Up</a></li>
+			<li><a href="../control-system">FRC Control System</a></li>
+			<li><a href="../java-programming">Java Programming</a></li>
+			<li><a href="#">Git</a></li>
+		</ul>
+	</div>
+	</div>
+	
+	<div class="main">
+		<div class="nav">
+			<h2>Next: <a href="../git">Git</a></h2>
+		<ul class="dropdown">
+			<li><a href="../">Home</a></li>
+			<li><a href="../setting-up">Setting Up</a><button class="accordion"></button>
+				<ul class="panel">
+					<li><a href="../setting-up/update-suite.html">Installing the FRC Update Suite</a></li>
+					<li><a href="../setting-up/">Installing Java</a></li>
+					<li><a href="../setting-up/installing-eclipse.html">Installing Eclipse and Plugins</a></li>
+				</ul>
+			</li>
+			<li><a href="../control-system">FRC Control System</a><button class="accordion"></button>
+				<ul class="panel">
+					<li><a href="../control-system/roborio.html">roboRIO</a></li>
+					<li><a href="../control-system/pdp.html">Power Distribution Panel</a></li>
+					<li><a href="../control-system/speed-controllers.html">Speed Controllers</a></li>
+					<li><a href="../control-system/pneumatics.html">Pneumatics</a></li>
+					<li><a href="../control-system/vrm.html">VRM</a></li>
+					<li><a href="../control-system/radio.html">Wireless Radio</a></li>
+				</ul>
+			</li>
+			<li><a href="../java-programming">Java Programming</a><button class="accordion"></button>
+				<ul class="panel">
+					<li><a href="eclipse.html">Using Eclipse</a></li>
+					<li><a href="api.html">WPILib API</a></li>
+					<li><a href="project.html">Creating Your Robot Project</a></li>
+					<li><a href="subsystems.html">Subsystems</a></li>
+					<li><a href="commands.html">Commands</a></li>
+					<li><a href="robotmap.html">RobotMap</a></li>
+					<li><a href="oi.html">OI</a></li>
+					<li><a href="#">Robot.java</a></li>
+				</ul>
+			</li>
+			<li><a href="../git">Git</a><button class="accordion"></button>
+				<ul class="panel">
+					<li><a href="../git/repositories.html">Repositories</a></li>
+					<li><a href="../git/github.html">GitHub</a></li>
+					<li><a href="../git/setting-up.html">Setting Up a Git Repository</a></li>
+					<li><a href="../git/branching">Branching</a></li>
+					<li><a href="../git/staging.html">Staging</a></li>
+					<li><a href="../committing.html">Committing</a></li>
+					<li><a href="../push-pull.html">Pushing and Pulling</a></li>
+					<li><a href="../merging.html">Merging</a></li>
+				</ul>
+			</li>
+		</ul>
+		</div>
+		<div class="confoot">
+			<div class="content">
+				<h1>OI</h1>
+				<p>Robot.java is the file where everything comes together.  It can be thought of as the executable part of the program, but it works a little differently.  Instead of having one main method, there are a bunch of different ones that are executed by the Driver Station when you do something as enable the robot.  We will talk about all of the methods individually.</p>
+                                <h4>robotInit()</h4>
+                                <p>This is the method that is run when the robot is first turned on.  It acts as a constructor, where all of the static variables in the class are initialized.  You should also run the OI.initialize() method in this method so that all of the joystick buttons are mapped.</p>
+                                <h4>disabledInit()</h4>
+                                <p>This is another "init" method, meaning it is only run once, in this case once the robot is disabled.  You could run a method here to perhaps stop a function of the robot just to be safe.  Usually it isn't necessary.</p>
+                                <h4>disabledPeriodic()</h4>
+                                <p>This is a "periodic" function, meaning that while the robot is disabled, it will loop over and over.  There really isn't much here except for anything the example robot project adds for you.</p>
+                                <h4>autonomousInit()</h4>
+                                <p>This is the method that runs once when the autonomous program runs.  This is where you can set the autonomous command that will run, either using a switch or just typing out which one you want.  There's also a short if statement that runs it: if (autonomousCommand !=null) autonomousCommand.start();</p>
+                                <h4>autonomousPeriodic()</h4>
+                                <p>Much like disabledPeriodic(), there is nothing much here, since the autonomous command only runs once.</p>
+                                <h4>teleopInit()</h4>
+                                <p>This is the method that runs once when the teleop mode is enabled.  Usually, this is used to stop the autonomous command and start the compressor using compressor.start();</p>
+                                <h4>teleopPeriodic()</h4>
+                                <p>This is where the magic happens.  Usually, you will just run the arcadeDrive() method from the drive train subsystem, so that you can drive the robot around.  The joystick buttons and commands are automatically enabled during this point.</p>
+                                <h4>testInit(), testPeriodic()</h4>
+                                <p>Same same same.  Our team personally does not use the test function, so we do not use these methods, but feel free to utilize them as you wish.</p>
+                                <p>Here is the Robot.java example provided by the robot project:</p>
+                                <pre class="prettyprint">package org.usfirst.frc.team2035.robot;
+
+import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.command.Scheduler;
+import edu.wpi.first.wpilibj.livewindow.LiveWindow;
+import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+
+import org.usfirst.frc.team2035.robot.commands.ExampleCommand;
+import org.usfirst.frc.team2035.robot.subsystems.ExampleSubsystem;
+
+/**
+ * The VM is configured to automatically run this class, and to call the
+ * functions corresponding to each mode, as described in the IterativeRobot
+ * documentation. If you change the name of this class or the package after
+ * creating this project, you must also update the manifest file in the resource
+ * directory.
+ */
+public class Robot extends IterativeRobot {
+
+    public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
+    public static OI oi;
+
+    Command autonomousCommand;
+    SendableChooser<Command> chooser = new SendableChooser<>();
+
+    /**
+     * This function is run when the robot is first started up and should be
+     * used for any initialization code.
+     */
+    @Override
+    public void robotInit() {
+        oi = new OI();
+        chooser.addDefault("Default Auto", new ExampleCommand());
+        // chooser.addObject("My Auto", new MyAutoCommand());
+        SmartDashboard.putData("Auto mode", chooser);
+    }
+
+    /**
+     * This function is called once each time the robot enters Disabled mode.
+     * You can use it to reset any subsystem information you want to clear when
+     * the robot is disabled.
+     */
+    @Override
+    public void disabledInit() {
+
+    }
+
+    @Override
+    public void disabledPeriodic() {
+        Scheduler.getInstance().run();
+    }
+
+    /**
+     * This autonomous (along with the chooser code above) shows how to select
+     * between different autonomous modes using the dashboard. The sendable
+     * chooser code works with the Java SmartDashboard. If you prefer the
+     * LabVIEW Dashboard, remove all of the chooser code and uncomment the
+     * getString code to get the auto name from the text box below the Gyro
+     *
+     * You can add additional auto modes by adding additional commands to the
+     * chooser code above (like the commented example) or additional comparisons
+     * to the switch structure below with additional strings & commands.
+     */
+    @Override
+    public void autonomousInit() {
+        autonomousCommand = chooser.getSelected();
+
+        /*
+         * String autoSelected = SmartDashboard.getString("Auto Selector",
+         * "Default"); switch(autoSelected) { case "My Auto": autonomousCommand
+         * = new MyAutoCommand(); break; case "Default Auto": default:
+         * autonomousCommand = new ExampleCommand(); break; }
+         */
+
+        // schedule the autonomous command (example)
+        if (autonomousCommand != null)
+            autonomousCommand.start();
+    }
+
+    /**
+     * This function is called periodically during autonomous
+     */
+    @Override
+    public void autonomousPeriodic() {
+        Scheduler.getInstance().run();
+    }
+
+    @Override
+    public void teleopInit() {
+        // This makes sure that the autonomous stops running when
+        // teleop starts running. If you want the autonomous to
+        // continue until interrupted by another command, remove
+        // this line or comment it out.
+        if (autonomousCommand != null)
+            autonomousCommand.cancel();
+    }
+
+    /**
+     * This function is called periodically during operator control
+     */
+    @Override
+    public void teleopPeriodic() {
+        Scheduler.getInstance().run();
+    }
+
+    /**
+     * This function is called periodically during test mode
+     */
+    @Override
+    public void testPeriodic() {
+        LiveWindow.run();
+    }
+}</pre>
+
+			</div>
+			<div class="footer">
+				<a href="../questions.html">Questions?</a>
+				<a href="https://wpilib.screenstepslive.com/s/4485" target="_blank">WPI ScreenSteps Live</a>
+				<a href="http://first.wpi.edu/FRC/roborio/release/docs/java/" target="_blank">WPILib API</a>
+				<a href="http://team2035.rocks/" target="_blank">Team 2035's Website</a>
+			</div><!--footer-->
+		</div><!--confoot-->
+	
+	</div>
+	
+
+<script>
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+		acc[i].onclick = function(){
+			this.classList.toggle("active");
+			var panel = this.nextElementSibling;
+			if (panel.style.display === "block") {
+				panel.style.display = "none";
+			} else {
+				panel.style.display = "block";
+			}
+		}
+	}
+	</script>
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+	
+</body>
+</html>
