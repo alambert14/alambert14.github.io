@@ -82,8 +82,7 @@
 				<h1>Subsystems</h1>
 				<p>On a command-based robot, the code is broken up a certain way. Basically, most files are either "subsystems" or "commands." We'll start by learning what a subsystem is and what they are used for. A subsystem is a class (one Java file) that represents a physical part of the robot. If you think of the robot as one system, each part of it can be considered a subsystem. For example, your robot might have an arm mechanism on the front. You could represent this part of the robot in the code as a subsystem class called Arm.java. Or, if you even had an ultrasonic sensor on the robot, it could have its own subsystem as well. You can have as many subsystems as you would like, depending on how organized you want the code to be. I recommend having one for each mechanism on the robot, just to keep it simple.</p>
 				<p>The purpose of the subsystem class is to contain all of the methods needed for that mechanism. If we return to the Arm example, an Arm subsystem might have a method to lift it up() or down() or activate an intake() motor. These methods are where all of the magic happens; it is where the components of the robot are actually programmed. Here is the basic structure of a subsystem class:</p>
-				<pre class="prettyprent">
-			        package org.usfirst.frc.team0000.robot.subsystems;
+				<pre class="prettyprint">package org.usfirst.frc.team0000.robot.subsystems;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.VictorSP;
 
@@ -109,29 +108,25 @@ public class MySubsystem extends Subsystem {
 }
 </pre>
 				<p>Amazing. Now, you might be wondering what a lot of that gobletygook means, so I am here to explain.</p>
-				<pre class="prettyprint">
-				import edu.wpi.first.wpilibj.command.Subsystem;
+				<pre class="prettyprint">import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.VictorSP;
 
 public class MySubsystem extends Subsystem {
 </pre>
 				<p>First off, we need to import some classes from our friend, the WPILib. The subsystem class will be the parent of our class, so that the robot knows this class is a subsystem. A Victor SP is just a type of speed controller that we will use as an example in this class. In the next line, you can see that in the class extends Subsystem, meaning that this class is now a subsystem and will have to have certain requirements. </p>
-				<pre class="prettyprint">
-				private VictorSP motor;
+				<pre class="prettyprint">private VictorSP motor;
 public MySubsystem() {
 	super("My Subsystem");
 	motor = new VictorSP(0);
 }
 </pre>
 				<p>The first line just declares a Victor object that we can program later on. As you can see, it is initialized in the constructor. Its only parameter is an integer that represents the channel it is plugged into (but you knew that because you looked it up in the API). Also in the constructor is a call to super, or in this case, Subsystem. The only parameter is the name of the subsystem, which isn't actually used for anything but convention. </p>
-				<pre class="prettyprint">
-				public void aMethod() {
+				<pre class="prettyprint">public void aMethod() {
 	motor.set(.5);
 }
 </pre>
 				<p>This is an example of a method you could write for the robot to execute. In this case, it spins a motor at half speed when this method is called.</p>
-				<pre class="prettyprint">
-				public void initDefaultCommand() {
+				<pre class="prettyprint">public void initDefaultCommand() {
 
 }
 </pre>

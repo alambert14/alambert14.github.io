@@ -157,13 +157,6 @@ protected void interrupted() {
                                 <p>These two methods are basically the same; they are run when the command is terminated.  Usually you will want to call a method from the subsystem that either stops a motor (as in this case) or returns a solenoid to a neutral position.  There can be others, but these are usually the most common.</p>
                                 <p>We've made it through our first command!  Now it is time to look at the overarching structure of the robot code itself...</p>
 
-
-
-
-
-
-
-
 			</div>
 			<div class="footer">
 				<a href="../questions.html">Questions?</a>

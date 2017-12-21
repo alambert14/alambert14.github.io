@@ -81,8 +81,7 @@
 			<div class="content">
 				<h1>Commands</h1>
 				<p>Commands are like an executable manifestation of those methods you wrote in your subsystem.  "Why can't you just call those methods?" you may ask.  I mean, you could in the code itself, but it is impossible to execute those methods with a Joystick Button, for example, without creating a Command class.  This is just how the command-based structure works, and we will explain how to execute commands later on.  For now, we will go over the basic structure of a command class and what goes where.  Here is a basic example:</p>
-                                <pre class="prettyprent">
-                                package org.usfirst.frc.team0000.robot.commands;
+                                <pre class="prettyprint">package org.usfirst.frc.team0000.robot.commands;
 import edu.wpi.first.wpilibj.command.Command;
 import org.usfirst.frc.team0000.robot.subsystems.MySubsystem;
 
@@ -114,41 +113,34 @@ public class MyCommand extends Command {
     }
 }</pre>
                                 <p>Let's break this down bit by bit.</p>
-                                <pre class="prettyprent">
-                                package org.usfirst.frc.team0000.robot.commands;
+                                <pre class="prettyprint">package org.usfirst.frc.team0000.robot.commands;
 import edu.wpi.first.wpilibj.command.Command;
 import org.usfirst.frc.team0000.robot.subsystems.MySubsystem;
 Import org.usfirst.frc.team0000.robot.Robot;</pre>
                                 <p>Just like in the subsystem (and every class) we have our package and imports.  In this case, we are importing the Command class from WPILib, and that subsystem we wrote before from our own files.  That will allow us to make a variable to store the subsystem in so we can have access to its private methods.  We also import our Robot.java file that will be discussed in a <a href="robot.html">later section</a>.</p>
-                                <pre class="prettyprent">
-                                public static OI oi;
+                                <pre class="prettyprint">public static OI oi;
 private MySubsystem sub;</pre>
                                 <p>Here are our instance variables!  The first one is an OI object, which we will discuss later on.  To be quite honest, I don't know why we make an OI object in each command.  It probably isn't even necessary, but it certainly hasn't done any harm.  If someone wants to remove this variable from all of their commands and let me know if it still works, I will update this portion of the tutorial.</p>
-                                <pre>
-                                public MyCommand() {
+                                <pre class="prettyprint">public MyCommand() {
     super("Command name");
     sub = Robot.getSubsystem();
     requires(sub);
 }</pre>
                                 <p>This is the constructor.  Just like before, there is a call to super that just allows us to name the command.  We are also going to initialize our subsystem variable to something you might not recognize.  We haven't gone over the structure of the Robot.java file yet; however, that is where all of the subsystems are initialized, and we are basically implementing a getter method in order to access it and use it in our command.  This is the way we avoid creating multiple instances of each subsystem.</p>
                                 <p>"requires()" is a really important line in the command code.  It basically is saying that the command cannot run unless a certain subsystem exists.  That is because the command utilizes the methods in that subsystem.  In this example, we are "requiring" MySubsystem.</p>
-                                <pre class="prettyprent">
-                                protected void intialize() {
+                                <pre class="prettyprint">protected void intialize() {
     oi = new OI();
 }</pre>
                                 <p>This initializing method is simply called when the command is first created.  We don't really utilize this except to initialize that OI object that I really don't know what is for.</p>
-                                <pre class="prettyprent">
-                                protected void execute() {
+                                <pre class="prettyprint">protected void execute() {
     sub.aMethod();
 }</pre>
                                 <p>This method does exactly what you think it does: it executes the command when time (a button is pressed, etc).  Inside of this method is where you would call methods from the subsystem.  It will continue to loop until the command is finished.</p>
-                                <pre class="prettyprent">
-                                protected boolean isFinished() {
+                                <pre class="prettyprint">protected boolean isFinished() {
     return false;
 }</pre>
                                 <p>This method is kinda funky.  isFinished determines how long a command will loop, basically.  Usually, for button commands, you will return false because you want the command to loop until it is interrupted (another button is pressed or released).  However, if your command for a toggle button, such as a switch to turn a motor on and off, you will want to return true so it only flips one time.</p>
-                                <pre class="prettyprent">
-                                protected void end() {
+                                <pre class="prettyprint">protected void end() {
     sub.anotherMethod();
 }
 protected void interrupted() {

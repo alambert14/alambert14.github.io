@@ -88,7 +88,8 @@
                                         <li>Other constants</li>
                                 </ul>
                                 <p>Most variables in RobotMap just look like this:</p>
-                                <pre class="prettyprint">public static final int F_LEFT_MOTOR_PWM = 2;</pre>
+                                <pre class="prettyprent">
+                                public static final int F_LEFT_MOTOR_PWM = 2;</pre>
                                 <p>Make sure that the variable name is descriptive, and use proper conventions for constants (capital letters separated by underscores).</p>
 			</div>
 			<div class="footer">
