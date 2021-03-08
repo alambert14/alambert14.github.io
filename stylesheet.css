@@ -3,10 +3,19 @@
 
 body {
    font-family: 'Roboto Slab', serif;
-   background-color: #b4a1ff;
 }
 h1 {
     text-align: center;
+}
+h3, h4 {
+    float: left;
+    flex-grow: 8;
+    margin: 10px;
+}
+#title {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: baseline;
 }
 
 #info {
@@ -14,17 +23,21 @@ h1 {
 }
 
 #location {
-    float: right;
     text-align: right;
+    width: 20%;
+    font-weight: bold;
+    padding: none;
 }
 
 #items ul {
-    width: 100%;
-    margin: auto;
+    display: flex;
+    align-items: baseline;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
 }
 #items li {
     display: inline-block;
     border: 1px solid black;
-    padding: 20px;
-    background-color: #cabdff;
+    padding: 15px;
+    list-style-type: none;
 }
